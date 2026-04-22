@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Litper · Descubre qué necesita tu cuarto</title>
-<meta name="description" content="Test inteligente en 40 segundos: descubre el producto premium exacto para tu hogar.">
+<title>Litper · Descubre Tu Tipo de Descanso</title>
+<meta name="description" content="Quiz de autodescubrimiento: descubre tu perfil de descanso y la solución exacta para transformar tu cuarto en 40 segundos.">
 <meta name="theme-color" content="#04060A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,148 +31,463 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
 @keyframes countUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .topbar{display:flex;justify-content:space-between;align-items:center;padding:4px 0 24px;animation:fadeIn .5s var(--ef)}.brand{display:flex;align-items:center;gap:12px}.brand-mark{position:relative;width:34px;height:34px;display:flex;align-items:center;justify-content:center}.brand-mark::before{content:'';position:absolute;inset:0;border:1.5px solid var(--gold);border-radius:50%;opacity:.3}.brand-core{width:12px;height:12px;background:var(--gold);border-radius:50%;box-shadow:0 0 16px rgba(212,168,87,.6);animation:pulse 2.5s ease-in-out infinite}.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:.1em;color:var(--bone);line-height:1}.brand-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--bone-50);letter-spacing:.12em;text-transform:uppercase}.pill{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--bone-70);letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;background:var(--bone-05);border:1px solid var(--bone-10);border-radius:100px;font-weight:500}.dot-live{width:6px;height:6px;background:var(--jade);border-radius:50%;box-shadow:0 0 8px var(--jade);animation:blink 2s ease-in-out infinite}
 .slide{display:none;flex-direction:column}.slide.active{display:flex;animation:slideIn .35s var(--ef)}
-.prog{padding:0 2px 28px;animation:fadeUp .5s var(--ef) .1s both}.prog-head{display:flex;justify-content:space-between;align-items:baseline;font-family:'JetBrains Mono',monospace;margin-bottom:10px}.prog-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone-70);font-weight:500}.prog-l b{color:var(--bone);font-weight:600}.prog-r{font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--gold);letter-spacing:-.02em}.prog-r sup{font-size:10px;color:var(--bone-50);margin-left:1px;font-family:'JetBrains Mono',monospace}.prog-bar{height:2px;background:var(--bone-10);border-radius:100px;position:relative;overflow:visible}.prog-fill{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,var(--gold-d),var(--gold));border-radius:100px;width:25%;transition:width .4s var(--e);box-shadow:0 0 10px rgba(212,168,87,.5)}.prog-fill::after{content:'';position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:8px;height:8px;background:var(--gold-b);border-radius:50%;box-shadow:0 0 10px var(--gold-b)}
+.prog{padding:0 2px 28px;animation:fadeUp .5s var(--ef) .1s both}.prog-head{display:flex;justify-content:space-between;align-items:baseline;font-family:'JetBrains Mono',monospace;margin-bottom:10px}.prog-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone-70);font-weight:500}.prog-l b{color:var(--bone);font-weight:600}.prog-r{font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--gold);letter-spacing:-.02em}.prog-r sup{font-size:10px;color:var(--bone-50);margin-left:1px;font-family:'JetBrains Mono',monospace}.prog-bar{height:2px;background:var(--bone-10);border-radius:100px;position:relative;overflow:visible}.prog-fill{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,var(--gold-d),var(--gold));border-radius:100px;width:20%;transition:width .4s var(--e);box-shadow:0 0 10px rgba(212,168,87,.5)}.prog-fill::after{content:'';position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:8px;height:8px;background:var(--gold-b);border-radius:50%;box-shadow:0 0 10px var(--gold-b)}
 .slabel{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:28px 0 14px;display:flex;align-items:center;gap:10px}.slabel::before{content:'';width:20px;height:1px;background:var(--gold)}
 .hero{margin-bottom:28px;animation:fadeUp .6s var(--ef) .1s both}.hero-eye{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}.hero-eye::before{content:'';width:24px;height:1px;background:var(--gold)}.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(32px,8.5vw,46px);line-height:1.02;letter-spacing:-.03em;color:var(--bone);margin-bottom:14px}.hero h1 em{font-style:italic;font-weight:400;color:var(--gold)}.hero p{font-size:16px;line-height:1.6;color:var(--bone-70);margin-bottom:16px}.hero p strong{color:var(--bone);font-weight:600}.hero-meta{display:flex;gap:16px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--bone-50);letter-spacing:.06em;text-transform:uppercase;font-weight:500;margin-bottom:24px}.hero-meta span{display:flex;align-items:center;gap:5px}
 .btn{position:relative;background:var(--bone);color:var(--void);border:none;padding:22px 28px;font-size:16px;font-weight:600;font-family:inherit;border-radius:100px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;box-shadow:0 20px 48px rgba(0,0,0,.4);overflow:hidden;transition:all .3s var(--ef)}.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold),var(--gold-b));opacity:0;transition:opacity .3s}.btn>*{position:relative;z-index:1}.btn:hover{transform:translateY(-2px);box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 40px rgba(212,168,87,.4)}.btn:hover::before{opacity:1}.btn:active{transform:translateY(0)}.btn svg{width:22px;height:22px;transition:transform .3s var(--ef)}.btn:hover svg{transform:translateX(5px)}
-.btn-shop{background:linear-gradient(135deg,#4A6CF7,#2563EB);color:white;border:none;padding:18px;font-size:15px;font-weight:600;font-family:inherit;border-radius:100px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-shadow:0 16px 40px rgba(74,108,247,.35);transition:all .25s var(--ef);text-decoration:none}.btn-shop:hover{transform:translateY(-2px);box-shadow:0 24px 60px rgba(74,108,247,.45)}.btn-shop:active{transform:translateY(0)}
-.btn-wa{background:linear-gradient(135deg,#25D366,#1DB954);color:white;border:none;padding:18px;font-size:15px;font-weight:600;font-family:inherit;border-radius:100px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-shadow:0 16px 40px rgba(37,211,102,.35);transition:all .25s var(--ef);text-decoration:none}.btn-wa:hover{transform:translateY(-2px);box-shadow:0 24px 60px rgba(37,211,102,.45)}.btn-wa:active{transform:translateY(0)}
+.btn-wa{background:linear-gradient(135deg,#25D366,#1DB954);color:white;border:none;padding:20px 24px;font-size:16px;font-weight:600;font-family:inherit;border-radius:100px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-shadow:0 16px 40px rgba(37,211,102,.35);transition:all .25s var(--ef);text-decoration:none}.btn-wa:hover{transform:translateY(-2px);box-shadow:0 24px 60px rgba(37,211,102,.45)}.btn-wa:active{transform:translateY(0)}
 .q-count{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px;animation:fadeUp .3s var(--ef)}.q-count::before{content:'';width:20px;height:1px;background:var(--gold)}.q-t{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,7vw,34px);line-height:1.1;letter-spacing:-.025em;color:var(--bone);margin-bottom:8px;animation:fadeUp .3s var(--ef) .05s both}.q-t em{font-style:italic;font-weight:400;color:var(--gold)}.q-s{font-size:14px;color:var(--bone-70);font-family:'JetBrains Mono',monospace;letter-spacing:.02em;font-weight:500;animation:fadeUp .3s var(--ef) .1s both;margin-bottom:24px}
 .opts{display:flex;flex-direction:column;gap:10px}.opt{position:relative;background:var(--bone-05);border:1px solid var(--bone-10);padding:16px;border-radius:16px;cursor:pointer;display:flex;align-items:center;gap:14px;transition:all .25s var(--ef);font-family:inherit;text-align:left;width:100%;color:var(--bone);animation:fadeUp .3s var(--ef) both;overflow:hidden}.opt:nth-child(1){animation-delay:.12s}.opt:nth-child(2){animation-delay:.16s}.opt:nth-child(3){animation-delay:.2s}.opt:nth-child(4){animation-delay:.24s}.opt:nth-child(5){animation-delay:.28s}.opt::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .3s var(--e)}.opt:hover{border-color:var(--bone-20);background:var(--bone-10);transform:translateX(3px)}.opt.sel{border-color:var(--gold);background:rgba(212,168,87,.12);box-shadow:0 10px 30px rgba(212,168,87,.2)}.opt.sel::before{transform:scaleY(1)}.opt-ico{font-size:22px;flex-shrink:0;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--obsidian);border-radius:14px;border:1px solid var(--bone-10);transition:all .25s var(--ef)}.opt.sel .opt-ico{background:linear-gradient(135deg,var(--gold),var(--gold-b));border-color:var(--gold-b);transform:rotate(-4deg) scale(1.05);box-shadow:0 8px 20px rgba(212,168,87,.4)}.opt-body{flex:1}.opt-label{font-weight:600;font-size:15px;color:var(--bone);margin-bottom:3px;line-height:1.3}.opt-desc{font-size:13px;color:var(--bone-70);line-height:1.4;font-family:'JetBrains Mono',monospace;font-weight:500}.opt-chk{width:22px;height:22px;border:1.5px solid var(--bone-35);border-radius:50%;flex-shrink:0;position:relative;transition:all .25s var(--ef)}.opt.sel .opt-chk{background:var(--gold);border-color:var(--gold)}.opt.sel .opt-chk::after{content:'';position:absolute;left:6px;top:3px;width:6px;height:11px;border:solid var(--void);border-width:0 2px 2px 0;transform:rotate(45deg)}
 .back-btn{background:transparent;border:1px solid var(--bone-10);color:var(--bone-70);font-size:12px;font-weight:500;font-family:'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;padding:10px 18px;border-radius:100px;cursor:pointer;display:flex;align-items:center;gap:8px;margin-top:20px;transition:all .25s var(--ef);align-self:flex-start}.back-btn:hover{color:var(--bone);border-color:var(--bone-35);background:var(--bone-05)}
-.loading{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 0}.orbital{position:relative;width:200px;height:200px;margin-bottom:36px}.orb{position:absolute;top:50%;left:50%;border-radius:50%;transform:translate(-50%,-50%)}.orb-1{width:100%;height:100%;border:1px solid var(--bone-10);border-top-color:var(--gold);border-right-color:rgba(212,168,87,.5);animation:spin 3s linear infinite}.orb-2{width:72%;height:72%;border:1px solid transparent;border-top-color:var(--gold-b);border-left-color:rgba(212,168,87,.3);animation:spin 4s linear infinite reverse}.orb-3{width:48%;height:48%;border:1px dashed var(--bone-35);animation:spin 6s linear infinite;opacity:.5}@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}.orb-core{position:absolute;top:50%;left:50%;width:68px;height:68px;background:radial-gradient(circle at 30% 30%,var(--gold-b),var(--gold) 50%,var(--gold-d));border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 50px rgba(212,168,87,.5),inset -8px -8px 18px rgba(0,0,0,.3);animation:breath 2.5s ease-in-out infinite}@keyframes breath{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.08)}}.load-t{font-family:'Fraunces',serif;font-weight:500;font-size:28px;letter-spacing:-.025em;color:var(--bone);text-align:center;margin-bottom:12px;line-height:1.1}.load-t em{font-style:italic;color:var(--gold);font-weight:400}.load-s{color:var(--bone-70);font-size:12px;margin-bottom:36px;text-align:center;font-family:'JetBrains Mono',monospace;letter-spacing:.15em;text-transform:uppercase;font-weight:500}.load-steps{width:100%;max-width:340px;display:flex;flex-direction:column;gap:6px}.lstep{display:flex;align-items:center;gap:14px;padding:12px 14px;font-size:13px;color:var(--bone-70);opacity:0;animation:fadeUp .4s forwards;transition:all .35s var(--ef);border-radius:12px;border:1px solid transparent;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;font-weight:500}.lstep.done{color:var(--bone);background:var(--bone-05);border-color:var(--bone-10)}.lstep.done .lstep-i{background:var(--jade);border-color:var(--jade);color:var(--void)}.lstep:nth-child(1){animation-delay:.1s}.lstep:nth-child(2){animation-delay:.7s}.lstep:nth-child(3){animation-delay:1.4s}.lstep:nth-child(4){animation-delay:2.1s}.lstep-i{width:24px;height:24px;border:1.5px solid var(--bone-35);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700;transition:all .35s var(--ef);color:var(--bone-70)}.lstep.done .lstep-i::after{content:'✓';font-size:13px}.lstep:not(.done) .lstep-i::after{content:attr(data-n)}
-.match-hero{position:relative;background:linear-gradient(135deg,var(--carbon),var(--obsidian));border:1px solid var(--bone-10);border-radius:24px;padding:28px 22px;margin-bottom:16px;overflow:hidden;animation:scaleIn .5s var(--ef)}.match-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:280px;height:280px;background:radial-gradient(circle,rgba(212,168,87,.25),transparent 70%);pointer-events:none}.match-badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);padding:6px 12px;background:var(--gold-s);border-radius:100px;margin-bottom:16px;border:1px solid rgba(212,168,87,.3);position:relative;z-index:1}.match-badge .dot{width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 8px var(--gold);animation:blink 1.8s infinite}.match-score{position:absolute;top:24px;right:22px;z-index:1;text-align:right}.match-score-num{font-family:'Fraunces',serif;font-weight:700;font-size:36px;color:var(--gold);line-height:1;letter-spacing:-.03em;animation:countUp .6s var(--e) .3s both}.match-score-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--bone-50);letter-spacing:.15em;text-transform:uppercase;font-weight:500}.match-icon{font-size:40px;margin-bottom:10px;position:relative;z-index:1}.match-name{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,7vw,34px);letter-spacing:-.025em;line-height:1.05;color:var(--bone);margin-bottom:12px;position:relative;z-index:1}.match-name em{font-style:italic;font-weight:400;color:var(--gold)}.match-why{font-size:14px;color:var(--bone-70);line-height:1.6;position:relative;z-index:1;margin-bottom:18px;padding:14px 16px;background:var(--bone-05);border-radius:14px;border:1px solid var(--bone-10)}.match-why strong{color:var(--bone);font-weight:600}.match-why-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}.match-benefits{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;position:relative;z-index:1}.match-ben{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--bone);font-weight:500}.match-ben::before{content:'✓';width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:var(--gold-s);color:var(--gold);border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0;border:1px solid rgba(212,168,87,.3)}.match-price{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--bone-50);margin-bottom:14px;position:relative;z-index:1;display:flex;align-items:center;gap:8px}.match-price b{font-family:'Fraunces',serif;font-size:22px;color:var(--bone);font-weight:600;letter-spacing:-.02em}
-.runners{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.runner{background:var(--bone-05);border:1px solid var(--bone-10);border-radius:18px;padding:16px;cursor:pointer;transition:all .25s var(--ef);text-align:left;font-family:inherit;color:var(--bone);width:100%;animation:fadeUp .4s var(--ef) both;text-decoration:none;display:block}.runner:nth-child(1){animation-delay:.15s}.runner:nth-child(2){animation-delay:.25s}.runner:nth-child(3){animation-delay:.35s}.runner:hover{border-color:var(--bone-20);background:var(--bone-10);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}.runner-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.runner-ico{font-size:24px}.runner-score{font-family:'Fraunces',serif;font-size:16px;font-weight:500;color:var(--gold)}.runner-name{font-family:'Fraunces',serif;font-weight:500;font-size:16px;letter-spacing:-.01em;color:var(--bone);line-height:1.2;margin-bottom:4px}.runner-name em{font-style:italic;font-weight:400;color:var(--gold)}.runner-desc{font-size:11px;color:var(--bone-70);line-height:1.4;font-family:'JetBrains Mono',monospace;font-weight:500;margin-bottom:10px}.runner-price{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--bone-50);margin-bottom:10px}.runner-price b{color:var(--bone);font-weight:600}.runner-cta{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#4A6CF7;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;transition:transform .2s}.runner:hover .runner-cta{transform:translateX(3px)}
-.bundle{position:relative;background:linear-gradient(135deg,var(--gold) 0%,#BE9642 60%,#8E6F27 100%);color:var(--void);border-radius:24px;padding:28px 22px;margin:20px 0 16px;overflow:hidden;cursor:pointer;border:none;text-align:left;width:100%;font-family:inherit;transition:transform .3s var(--ef);animation:fadeUp .5s var(--ef) .3s both;text-decoration:none;display:block}.bundle:hover{transform:translateY(-3px);box-shadow:0 32px 80px rgba(212,168,87,.35)}.bundle::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 50% at 50% 0%,rgba(255,240,200,.3),transparent 60%),radial-gradient(ellipse 80% 50% at 100% 100%,rgba(0,0,0,.2),transparent 60%);pointer-events:none}.bundle.highlight{box-shadow:0 0 0 3px var(--void),0 0 0 5px var(--gold-b),0 32px 80px rgba(212,168,87,.35);animation:fadeUp .5s var(--ef) .3s both,bundlePulse 2s ease-in-out infinite}@keyframes bundlePulse{0%,100%{box-shadow:0 0 0 3px var(--void),0 0 0 5px var(--gold-b),0 32px 80px rgba(212,168,87,.35)}50%{box-shadow:0 0 0 3px var(--void),0 0 0 8px rgba(245,202,122,.6),0 32px 80px rgba(212,168,87,.45)}}.bundle-ribbon{position:absolute;top:14px;right:14px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);background:var(--void);padding:5px 10px;border-radius:6px;z-index:2;display:flex;align-items:center;gap:6px}.bundle-ribbon::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;animation:blink 1.5s infinite}.bundle-rec{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:4px 10px;background:var(--void);color:var(--gold-b);border-radius:6px;display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;position:relative;z-index:1}.bundle-eye{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(4,6,10,.8);margin-bottom:8px;position:relative;z-index:1}.bundle-t{font-family:'Fraunces',serif;font-weight:500;font-size:24px;letter-spacing:-.025em;line-height:1.1;color:var(--void);margin-bottom:8px;position:relative;z-index:1}.bundle-t em{font-style:italic;font-weight:400}.bundle-items{display:flex;flex-direction:column;gap:5px;margin-bottom:16px;position:relative;z-index:1}.bundle-item{font-size:13px;color:var(--void);display:flex;align-items:center;gap:8px;font-weight:500}.bundle-item::before{content:'✓';width:18px;height:18px;display:flex;align-items:center;justify-content:center;background:var(--void);color:var(--gold);border-radius:50%;font-size:11px;font-weight:700;flex-shrink:0}.bundle-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px solid rgba(4,6,10,.2);position:relative;z-index:1}.bundle-old{font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(4,6,10,.5);text-decoration:line-through;font-weight:500}.bundle-price{font-family:'Fraunces',serif;font-weight:700;font-size:28px;color:var(--void);letter-spacing:-.03em;line-height:1}.bundle-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(4,6,10,.65);letter-spacing:.06em;font-weight:500}.bundle-btn{background:var(--void);color:var(--gold);padding:12px 18px;border-radius:100px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;transition:transform .25s;font-family:inherit;white-space:nowrap}.bundle:hover .bundle-btn{transform:translateX(4px)}
-.all-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.all-card{background:var(--bone-05);border:1px solid var(--bone-10);border-radius:16px;padding:16px;cursor:pointer;transition:all .25s var(--ef);text-align:center;font-family:inherit;color:var(--bone);width:100%;animation:fadeUp .4s var(--ef) both;text-decoration:none;display:block}.all-card:nth-child(1){animation-delay:.1s}.all-card:nth-child(2){animation-delay:.15s}.all-card:nth-child(3){animation-delay:.2s}.all-card:nth-child(4){animation-delay:.25s}.all-card:hover{border-color:var(--bone-20);background:var(--bone-10);transform:translateY(-2px)}.all-ico{font-size:28px;margin-bottom:8px}.all-name{font-family:'Fraunces',serif;font-weight:500;font-size:14px;color:var(--bone);margin-bottom:6px;letter-spacing:-.01em}.all-name em{font-style:italic;font-weight:400;color:var(--gold)}.all-cta{font-size:10px;font-weight:600;color:#4A6CF7;font-family:'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:4px}
+.loading{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 0}.orbital{position:relative;width:200px;height:200px;margin-bottom:36px}.orb{position:absolute;top:50%;left:50%;border-radius:50%;transform:translate(-50%,-50%)}.orb-1{width:100%;height:100%;border:1px solid var(--bone-10);border-top-color:var(--gold);border-right-color:rgba(212,168,87,.5);animation:spin 3s linear infinite}.orb-2{width:72%;height:72%;border:1px solid transparent;border-top-color:var(--gold-b);border-left-color:rgba(212,168,87,.3);animation:spin 4s linear infinite reverse}.orb-3{width:48%;height:48%;border:1px dashed var(--bone-35);animation:spin 6s linear infinite;opacity:.5}@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}.orb-core{position:absolute;top:50%;left:50%;width:68px;height:68px;background:radial-gradient(circle at 30% 30%,var(--gold-b),var(--gold) 50%,var(--gold-d));border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 50px rgba(212,168,87,.5),inset -8px -8px 18px rgba(0,0,0,.3);animation:breath 2.5s ease-in-out infinite}@keyframes breath{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.08)}}.load-t{font-family:'Fraunces',serif;font-weight:500;font-size:28px;letter-spacing:-.025em;color:var(--bone);text-align:center;margin-bottom:12px;line-height:1.1}.load-t em{font-style:italic;color:var(--gold);font-weight:400}.load-s{color:var(--bone-70);font-size:12px;margin-bottom:36px;text-align:center;font-family:'JetBrains Mono',monospace;letter-spacing:.15em;text-transform:uppercase;font-weight:500}.load-steps{width:100%;max-width:340px;display:flex;flex-direction:column;gap:6px}.lstep{display:flex;align-items:center;gap:14px;padding:12px 14px;font-size:13px;color:var(--bone-70);opacity:0;animation:fadeUp .4s forwards;transition:all .35s var(--ef);border-radius:12px;border:1px solid transparent;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;font-weight:500}.lstep.done{color:var(--bone);background:var(--bone-05);border-color:var(--bone-10)}.lstep.done .lstep-i{background:var(--jade);border-color:var(--jade);color:var(--void)}.lstep:nth-child(1){animation-delay:.1s}.lstep:nth-child(2){animation-delay:.7s}.lstep:nth-child(3){animation-delay:1.4s}.lstep:nth-child(4){animation-delay:2.1s}.lstep-i{width:24px;height:24px;border:1.5px solid var(--bone-35);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700;transition:all .35s var(--ef);color:var(--bone-70)}.lstep.done .lstep-i::after{content:'\2713';font-size:13px}.lstep:not(.done) .lstep-i::after{content:attr(data-n)}
+
+/* BRECHA EMOCIONAL PAGE */
+.brecha{animation:scaleIn .5s var(--ef)}.brecha-type{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);padding:8px 16px;background:var(--gold-s);border-radius:100px;margin-bottom:20px;border:1px solid rgba(212,168,87,.3)}.brecha-type .dot{width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 8px var(--gold);animation:blink 1.8s infinite}
+.brecha-title{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,8vw,40px);line-height:1.05;letter-spacing:-.03em;color:var(--bone);margin-bottom:20px}.brecha-title em{font-style:italic;font-weight:400;color:var(--gold)}
+.brecha-icon{font-size:56px;margin-bottom:16px;display:block}
+.brecha-desc{font-size:16px;line-height:1.7;color:var(--bone-70);margin-bottom:24px}.brecha-desc strong{color:var(--bone);font-weight:600}
+.brecha-stat{background:linear-gradient(135deg,var(--carbon),var(--obsidian));border:1px solid var(--bone-10);border-radius:20px;padding:24px;margin-bottom:24px;text-align:center}.brecha-stat-num{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(42px,12vw,64px);color:var(--gold);line-height:1;letter-spacing:-.04em;animation:countUp .6s var(--e) .2s both}.brecha-stat-label{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--bone-70);letter-spacing:.08em;text-transform:uppercase;margin-top:8px;font-weight:500;line-height:1.4}
+.brecha-consequence{background:rgba(209,79,68,.08);border:1px solid rgba(209,79,68,.2);border-radius:16px;padding:20px;margin-bottom:28px;display:flex;gap:14px;align-items:flex-start}.brecha-consequence-icon{font-size:24px;flex-shrink:0;margin-top:2px}.brecha-consequence-text{font-size:14px;color:var(--bone-70);line-height:1.6}.brecha-consequence-text strong{color:var(--blood);font-weight:600}
+.brecha-solution{background:rgba(133,176,144,.08);border:1px solid rgba(133,176,144,.2);border-radius:16px;padding:20px;margin-bottom:32px;display:flex;gap:14px;align-items:flex-start}.brecha-solution-icon{font-size:24px;flex-shrink:0;margin-top:2px}.brecha-solution-text{font-size:14px;color:var(--bone-70);line-height:1.6}.brecha-solution-text strong{color:var(--jade);font-weight:600}
+
+/* RUTA DE ESCAPE (PRODUCT) */
+.ruta{animation:scaleIn .5s var(--ef)}
+.ruta-connection{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px;padding:8px 16px;background:var(--gold-s);border-radius:100px;border:1px solid rgba(212,168,87,.3);display:inline-flex}
+.ruta-product{position:relative;background:linear-gradient(135deg,var(--carbon),var(--obsidian));border:1px solid var(--bone-10);border-radius:24px;padding:28px 22px;margin-bottom:20px;overflow:hidden}.ruta-product::before{content:'';position:absolute;top:-100px;right:-100px;width:280px;height:280px;background:radial-gradient(circle,rgba(212,168,87,.2),transparent 70%);pointer-events:none}
+.ruta-ico{font-size:48px;margin-bottom:12px;position:relative;z-index:1}
+.ruta-name{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(24px,7vw,32px);letter-spacing:-.025em;line-height:1.1;color:var(--bone);margin-bottom:6px;position:relative;z-index:1}.ruta-name em{font-style:italic;font-weight:400;color:var(--gold)}
+.ruta-mechanism{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;position:relative;z-index:1}
+.ruta-benefits{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;position:relative;z-index:1}.ruta-ben{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--bone);font-weight:500;line-height:1.5}.ruta-ben::before{content:'\2713';width:24px;height:24px;display:flex;align-items:center;justify-content:center;background:var(--gold-s);color:var(--gold);border-radius:50%;font-size:12px;font-weight:700;flex-shrink:0;border:1px solid rgba(212,168,87,.3);margin-top:1px}
+.ruta-testimonials{margin-bottom:24px}.ruta-testi{background:var(--bone-05);border:1px solid var(--bone-10);border-radius:16px;padding:16px;margin-bottom:10px}.ruta-testi-text{font-size:14px;color:var(--bone);line-height:1.5;font-style:italic;font-family:'Fraunces',serif;margin-bottom:8px}.ruta-testi-author{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--bone-50);letter-spacing:.08em;text-transform:uppercase;font-weight:500;display:flex;align-items:center;gap:8px}.ruta-testi-stars{color:var(--gold);font-style:normal}
+
 .proof{display:flex;gap:12px;padding:16px 18px;background:var(--bone-05);border:1px solid var(--bone-10);border-radius:18px;margin:20px 0 14px;align-items:center;animation:fadeUp .5s var(--ef) .4s both}.proof-avs{display:flex;flex-shrink:0}.proof-av{width:34px;height:34px;border-radius:50%;border:2px solid var(--obsidian);margin-left:-10px;display:flex;align-items:center;justify-content:center;color:var(--void);font-weight:600;font-size:11px;font-family:'Fraunces',serif;font-style:italic}.proof-av:first-child{margin-left:0}.proof-av:nth-child(1){background:linear-gradient(135deg,var(--gold),var(--ember))}.proof-av:nth-child(2){background:linear-gradient(135deg,var(--jade),#5A7850)}.proof-av:nth-child(3){background:linear-gradient(135deg,var(--royal),#5E4F7D)}.proof-av:nth-child(4){background:linear-gradient(135deg,#C9AE84,#95744A);font-size:8px}.proof-text{font-size:12px;color:var(--bone-70);line-height:1.45;flex:1}.proof-text strong{color:var(--bone);font-weight:600}.proof-text em{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-weight:500}
 .gars{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;animation:fadeUp .5s var(--ef) .5s both}.gar{background:var(--bone-05);border:1px solid var(--bone-10);padding:14px 8px;border-radius:14px;text-align:center}.gar-ico{font-size:20px;margin-bottom:6px}.gar-t{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--bone);line-height:1.3}.gar-d{font-size:10px;color:var(--bone-50);margin-top:3px;line-height:1.35;font-family:'JetBrains Mono',monospace}
 .faq-item{background:var(--bone-05);border:1px solid var(--bone-10);border-radius:14px;margin-bottom:8px;overflow:hidden}.faq-q{padding:14px 16px;font-size:14px;font-weight:600;color:var(--bone);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;user-select:none}.faq-q:hover{background:var(--bone-05)}.faq-ic{width:20px;height:20px;border-radius:50%;background:var(--bone-10);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform .3s var(--ef);flex-shrink:0;font-weight:300}.faq-item.open .faq-ic{transform:rotate(45deg);background:var(--gold);color:var(--void)}.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--e)}.faq-item.open .faq-a{max-height:300px}.faq-a-in{padding:0 16px 14px;font-size:13px;color:var(--bone-70);line-height:1.55}.faq-a-in strong{color:var(--bone)}
-.floating{position:fixed;bottom:0;left:0;right:0;z-index:100;padding:14px 16px;background:linear-gradient(180deg,transparent 0%,var(--void) 40%);pointer-events:none;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s}.floating.visible{opacity:1;transform:translateY(0);pointer-events:all}.floating-in{max-width:560px;margin:0 auto;background:var(--carbon);border:1px solid var(--bone-10);border-radius:18px;padding:10px 10px 10px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 -10px 40px rgba(0,0,0,.4)}.floating-text{flex:1;font-size:13px;color:var(--bone);font-weight:500}.floating-text em{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-weight:400}.floating-btn{background:#25D366;color:white;padding:10px 14px;border-radius:100px;font-size:12px;font-weight:600;font-family:inherit;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;flex-shrink:0;box-shadow:0 4px 14px rgba(37,211,102,.4)}
-.footer{text-align:center;padding:40px 0 120px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--bone-50);letter-spacing:.15em;text-transform:uppercase;border-top:1px solid var(--bone-10);margin-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-weight:500}
+.footer{text-align:center;padding:40px 0 40px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--bone-50);letter-spacing:.15em;text-transform:uppercase;border-top:1px solid var(--bone-10);margin-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-weight:500}
+/* Others grid */
+.others-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.others-card{background:var(--bone-05);border:1px solid var(--bone-10);border-radius:16px;padding:16px;cursor:pointer;transition:all .25s var(--ef);text-align:center;font-family:inherit;color:var(--bone);width:100%;text-decoration:none;display:block}.others-card:hover{border-color:var(--bone-20);background:var(--bone-10);transform:translateY(-2px)}.others-ico{font-size:28px;margin-bottom:8px}.others-name{font-family:'Fraunces',serif;font-weight:500;font-size:14px;color:var(--bone);margin-bottom:4px}.others-name em{font-style:italic;font-weight:400;color:var(--gold)}.others-cta{font-size:10px;font-weight:600;color:var(--jade);font-family:'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:4px}
 @media(min-width:768px){.app{padding:40px 32px 60px;max-width:640px}}
-@media(max-width:380px){.runners{grid-template-columns:1fr}.all-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.others-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 <div class="bg"></div><div class="bg-o bg-o1"></div><div class="bg-o bg-o2"></div><div class="bg-n"></div>
 <div class="app">
-<header class="topbar"><div class="brand"><div class="brand-mark"><span class="brand-core"></span></div><div><div class="brand-name">LITPER</div><div class="brand-tag">Home · Textiles · Sueño</div></div></div><div class="pill"><span class="dot-live"></span>Envío gratis</div></header>
+<header class="topbar"><div class="brand"><div class="brand-mark"><span class="brand-core"></span></div><div><div class="brand-name">LITPER</div><div class="brand-tag">Home &middot; Textiles &middot; Premium</div></div></div><div class="pill"><span class="dot-live"></span>Env&iacute;o gratis</div></header>
 
-<!-- SLIDE 0: QUIZ -->
+<!-- ==================== SLIDE 0: QUIZ ==================== -->
 <div class="slide active" id="s-quiz">
-    <div class="hero" id="heroBlock"><div class="hero-eye">Test inteligente · 40 seg</div><h1>Descubre qué necesita <em>tu cuarto</em>.</h1><p>Responde 4 preguntas y te recomendamos el producto <strong>exacto</strong> con tu porcentaje de match. Más de <strong>15.000 familias</strong> colombianas confían en Litper.</p><div class="hero-meta"><span>⚡ 40 segundos</span><span>💳 Contra entrega</span><span>🛡️ Garantía 3 meses</span></div></div>
-    <div class="prog" id="progBlock" style="display:none"><div class="prog-head"><div class="prog-l">Pregunta <b id="qN">1</b> de 4</div><div class="prog-r"><span id="qPct">25</span><sup>%</sup></div></div><div class="prog-bar"><div class="prog-fill" id="qFill"></div></div></div>
-    <div id="q1" style="display:none"><div class="q-count"><span>01</span> · Tu mayor problema</div><h2 class="q-t">¿Qué <em>problema</em> tienes en tu cuarto?</h2><p class="q-s">Elige el que más te afecta</p><div class="opts" data-q="dolor"><button class="opt" data-v="luz"><div class="opt-ico">☀️</div><div class="opt-body"><div class="opt-label">La luz me despierta temprano</div><div class="opt-desc">Necesito oscuridad total</div></div><div class="opt-chk"></div></button><button class="opt" data-v="cama"><div class="opt-ico">🛏️</div><div class="opt-body"><div class="opt-label">Mi cama no es cómoda</div><div class="opt-desc">Sábanas ásperas o desgastadas</div></div><div class="opt-chk"></div></button><button class="opt" data-v="manchas"><div class="opt-ico">💧</div><div class="opt-body"><div class="opt-label">Mi colchón se está dañando</div><div class="opt-desc">Manchas, líquidos, ácaros</div></div><div class="opt-chk"></div></button><button class="opt" data-v="frio"><div class="opt-ico">🥶</div><div class="opt-body"><div class="opt-label">Paso frío en la noche</div><div class="opt-desc">Necesito algo que me abrigue</div></div><div class="opt-chk"></div></button><button class="opt" data-v="todo"><div class="opt-ico">😤</div><div class="opt-body"><div class="opt-label">Varias de las anteriores</div><div class="opt-desc">Mi cuarto necesita renovación</div></div><div class="opt-chk"></div></button></div></div>
-    <div id="q2" style="display:none"><div class="q-count"><span>02</span> · Urgencia</div><h2 class="q-t">¿Qué tan <em>urgente</em> es?</h2><p class="q-s">Nivel de prioridad</p><div class="opts" data-q="urgencia"><button class="opt" data-v="alta"><div class="opt-ico">🔴</div><div class="opt-body"><div class="opt-label">Ya no aguanto más</div><div class="opt-desc">Afecta mi descanso todos los días</div></div><div class="opt-chk"></div></button><button class="opt" data-v="media"><div class="opt-ico">🟡</div><div class="opt-body"><div class="opt-label">Me molesta pero aguanto</div><div class="opt-desc">Quiero resolverlo pronto</div></div><div class="opt-chk"></div></button><button class="opt" data-v="baja"><div class="opt-ico">🟢</div><div class="opt-body"><div class="opt-label">Quiero mejorar, no es urgente</div><div class="opt-desc">Aprovecho si hay buena oferta</div></div><div class="opt-chk"></div></button></div><button class="back-btn" onclick="qBack()">← Volver</button></div>
-    <div id="q3" style="display:none"><div class="q-count"><span>03</span> · Presupuesto</div><h2 class="q-t">¿Cuánto <em>piensas invertir?</em></h2><p class="q-s">Para recomendarte mejor</p><div class="opts" data-q="budget"><button class="opt" data-v="bajo"><div class="opt-ico">💚</div><div class="opt-body"><div class="opt-label">Menos de $100.000</div><div class="opt-desc">Un solo producto</div></div><div class="opt-chk"></div></button><button class="opt" data-v="medio"><div class="opt-ico">💛</div><div class="opt-body"><div class="opt-label">$100.000 – $200.000</div><div class="opt-desc">Combo o producto premium</div></div><div class="opt-chk"></div></button><button class="opt" data-v="alto"><div class="opt-ico">🧡</div><div class="opt-body"><div class="opt-label">$200.000 o más</div><div class="opt-desc">Quiero lo mejor</div></div><div class="opt-chk"></div></button></div><button class="back-btn" onclick="qBack()">← Volver</button></div>
-    <div id="q4" style="display:none"><div class="q-count"><span>04</span> · Última · Zona</div><h2 class="q-t">¿Desde dónde <em>nos escribes?</em></h2><p class="q-s">Validamos stock y entrega</p><div class="opts" data-q="zona"><button class="opt" data-v="bogota"><div class="opt-ico">🏙️</div><div class="opt-body"><div class="opt-label">Bogotá</div><div class="opt-desc">Entrega 1-2 días</div></div><div class="opt-chk"></div></button><button class="opt" data-v="medellin"><div class="opt-ico">🏔️</div><div class="opt-body"><div class="opt-label">Medellín · Antioquia</div><div class="opt-desc">Entrega 2-3 días</div></div><div class="opt-chk"></div></button><button class="opt" data-v="cali"><div class="opt-ico">🌴</div><div class="opt-body"><div class="opt-label">Cali · Valle</div><div class="opt-desc">Entrega 2-3 días</div></div><div class="opt-chk"></div></button><button class="opt" data-v="otra"><div class="opt-ico">📍</div><div class="opt-body"><div class="opt-label">Otra ciudad Colombia</div><div class="opt-desc">Entrega 3-6 días</div></div><div class="opt-chk"></div></button></div><button class="back-btn" onclick="qBack()">← Volver</button></div>
-    <button class="btn" id="startBtn" onclick="startQuiz()" style="animation:fadeUp .6s var(--ef) .5s both"><span>Descubrir mi producto ideal</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg></button>
-</div>
-
-<!-- SLIDE 1: LOADING -->
-<div class="slide" id="s-load"><div class="loading"><div class="orbital"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div><div class="orb-core"></div></div><h2 class="load-t">Calculando tu <em>match</em></h2><p class="load-s">Analizando respuestas</p><div class="load-steps"><div class="lstep done" id="ls1"><div class="lstep-i" data-n="1"></div><span>Evaluando problema</span></div><div class="lstep" id="ls2"><div class="lstep-i" data-n="2"></div><span>Calculando match</span></div><div class="lstep" id="ls3"><div class="lstep-i" data-n="3"></div><span>Seleccionando producto</span></div><div class="lstep" id="ls4"><div class="lstep-i" data-n="4"></div><span>Generando resultado</span></div></div></div></div>
-
-<!-- SLIDE 2: RESULTADOS -->
-<div class="slide" id="s-results">
-    <div class="match-hero" id="matchHero"><div class="match-badge"><span class="dot"></span>Tu #1 match</div><div class="match-score"><div class="match-score-num" id="matchPct">94%</div><div class="match-score-label">Match</div></div><div class="match-icon" id="matchIco">🛡️</div><h2 class="match-name" id="matchName">Protector de colchón <em>Premium</em></h2><div class="match-why" id="matchWhy"><span class="match-why-label">Por qué te lo recomendamos</span>Dijiste que tu colchón se está dañando. El <strong>Termosellado 360°</strong> lo protege completamente.</div><div class="match-benefits" id="matchBenefits"><div class="match-ben">Antifluido alta resistencia</div><div class="match-ben">Termosellado 360°</div><div class="match-ben">Hipoalergénico</div></div><div class="match-price" id="matchPriceDiv">Desde <b id="matchPriceNum">$164.900</b> · Paga 1 Lleva 6</div><a class="btn-shop" id="matchBtn" href="#"><span>🛒</span>Ver producto en la tienda</a></div>
-
-    <div class="slabel">También podría interesarte</div>
-    <div class="runners" id="runnersGrid"></div>
-
-    <div class="slabel">O llévate todo</div>
-    <button class="bundle" id="bundleCard" onclick="goKit()"><div class="bundle-ribbon">Ahorra $230K</div><div class="bundle-rec" id="bundleRec" style="display:none">✦ Recomendado para ti</div><div class="bundle-eye">Kit Cuarto Perfecto</div><h2 class="bundle-t">Los 3 productos <em>juntos</em></h2><div class="bundle-items"><div class="bundle-item">Protector de colchón Premium</div><div class="bundle-item">Pack sábanas Premium 600 hilos</div><div class="bundle-item">Cortinas Blackout Premium</div></div><div class="bundle-footer"><div><div class="bundle-old">Normal $429.700</div><div class="bundle-price">$199.900</div><div class="bundle-note">Envío gratis · Garantía 3 meses</div></div><div class="bundle-btn"><span>💚</span><span>Lo quiero</span></div></div></button>
-
-    <div class="slabel">Todas las soluciones Litper</div>
-    <div class="all-grid">
-        <a class="all-card" href="https://litper.store/products/protector-colchon-antifluido-paga-1-lleva-6" target="_blank"><div class="all-ico">🛡️</div><div class="all-name">Protector <em>Premium</em></div><div class="all-cta">🛒 Ver producto →</div></a>
-        <a class="all-card" href="https://litper.store/products/sabanas-premium-microfibra-paga-1-lleva-2" target="_blank"><div class="all-ico">🛏️</div><div class="all-name">Sábanas <em>Premium</em></div><div class="all-cta">🛒 Ver producto →</div></a>
-        <a class="all-card" href="https://litper.store/products/cortina-blackout-prmeium" target="_blank"><div class="all-ico">🪟</div><div class="all-name">Cortinas <em>Blackout</em></div><div class="all-cta">🛒 Ver producto →</div></a>
-        <a class="all-card" href="https://litper.store/products/cobija-acanalada-premium-manta-tejida-gruesa" target="_blank"><div class="all-ico">🧣</div><div class="all-name">Cobijas <em>Premium</em></div><div class="all-cta">🛒 Ver producto →</div></a>
+    <div class="hero" id="heroBlock">
+        <div class="hero-eye">Test de autodescubrimiento &middot; 50 seg</div>
+        <h1>Descubre tu <em>tipo de descanso.</em></h1>
+        <p>Responde 5 preguntas y descubre <strong>qu&eacute; est&aacute; saboteando tu sue&ntilde;o</strong> sin que lo sepas. M&aacute;s de <strong>15.000 familias</strong> colombianas ya lo hicieron.</p>
+        <div class="hero-meta">
+            <span>&lt; 1 minuto</span>
+            <span>100% gratis</span>
+            <span>Resultado personalizado</span>
+        </div>
+    </div>
+    <div class="prog" id="progBlock" style="display:none">
+        <div class="prog-head">
+            <div class="prog-l">Pregunta <b id="qN">1</b> de 5</div>
+            <div class="prog-r"><span id="qPct">20</span><sup>%</sup></div>
+        </div>
+        <div class="prog-bar"><div class="prog-fill" id="qFill"></div></div>
     </div>
 
-    <div class="proof"><div class="proof-avs"><div class="proof-av">MC</div><div class="proof-av">JR</div><div class="proof-av">LT</div><div class="proof-av">+15K</div></div><div class="proof-text"><strong>+15.000 familias</strong> colombianas confían en Litper · <em>"Cambió mi descanso"</em></div></div>
-    <div class="gars"><div class="gar"><div class="gar-ico">🛡️</div><div class="gar-t">Garantía<br>3 meses</div><div class="gar-d">Devuelve si no funciona</div></div><div class="gar"><div class="gar-ico">💳</div><div class="gar-t">Contra<br>entrega</div><div class="gar-d">Pagas al recibir</div></div><div class="gar"><div class="gar-ico">🚚</div><div class="gar-t">Envío<br>gratis</div><div class="gar-d">A todo Colombia</div></div></div>
-    <div class="slabel" style="margin-top:28px">Preguntas frecuentes</div>
-    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>¿Cómo funciona pago contra entrega?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">La transportadora llega a tu dirección, te entregan el producto y <strong>pagas en ese momento</strong>. No pagas nada antes.</div></div></div>
-    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>¿Cuánto tarda la entrega?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in"><strong>Bogotá:</strong> 1-2 días. <strong>Medellín, Cali:</strong> 2-3 días. <strong>Otras:</strong> 3-6 días.</div></div></div>
-    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>¿Qué incluye la garantía de 3 meses?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Si no cumple lo que prometemos, te devolvemos <strong>la plata completa y te quedas con el producto</strong>.</div></div></div>
-    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>¿El Kit trae los 3 productos?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Sí. <strong>Protector + sábanas + cortinas</strong> por $199.900 con envío gratis y garantía 3 meses.</div></div></div>
-    <footer class="footer"><span>LITPER © 2026</span><span>Colombia 🇨🇴</span><span>litper.store</span></footer>
-</div>
+    <!-- Q1: Habito/comportamiento -->
+    <div id="q1" style="display:none">
+        <div class="q-count"><span>01</span> &middot; Tu rutina</div>
+        <h2 class="q-t">&iquest;C&oacute;mo describes tu <em>noche t&iacute;pica?</em></h2>
+        <p class="q-s">S&eacute; sincero, nadie te juzga</p>
+        <div class="opts" data-q="rutina">
+            <button class="opt" data-v="inquieto"><div class="opt-ico">🌀</div><div class="opt-body"><div class="opt-label">Me muevo mucho y me despierto cansado</div><div class="opt-desc">S&aacute;banas enredadas, calor, incomodidad</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="ligero"><div class="opt-ico">👁️</div><div class="opt-body"><div class="opt-label">Cualquier cosa me despierta</div><div class="opt-desc">Luz, ruido, temperatura... todo me afecta</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="preocupado"><div class="opt-ico">😰</div><div class="opt-body"><div class="opt-label">Me acuesto preocupado por mi cama</div><div class="opt-desc">Manchas, &aacute;caros, col&ccedil;h&oacute;n da&ntilde;ado</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="frio"><div class="opt-ico">🥶</div><div class="opt-body"><div class="opt-label">Paso fr&iacute;o y nunca me siento c&oacute;modo</div><div class="opt-desc">Cobijas que no abrigan, noches largas</div></div><div class="opt-chk"></div></button>
+        </div>
+    </div>
+
+    <!-- Q2: Dolor/frustracion -->
+    <div id="q2" style="display:none">
+        <div class="q-count"><span>02</span> &middot; Tu frustraci&oacute;n</div>
+        <h2 class="q-t">&iquest;Qu&eacute; es lo que m&aacute;s <em>te frustra</em> de tu cuarto?</h2>
+        <p class="q-s">Esa cosa que te molesta cada d&iacute;a</p>
+        <div class="opts" data-q="frustracion">
+            <button class="opt" data-v="colchon"><div class="opt-ico">💧</div><div class="opt-body"><div class="opt-label">Mi colch&oacute;n se est&aacute; da&ntilde;ando y no lo puedo proteger</div><div class="opt-desc">Manchas, l&iacute;quidos, sudor, &aacute;caros</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="sabanas"><div class="opt-ico">😤</div><div class="opt-body"><div class="opt-label">Mis s&aacute;banas son &aacute;speras y se sueltan todo el tiempo</div><div class="opt-desc">Compro y compro pero nada dura</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="luz"><div class="opt-ico">☀️</div><div class="opt-body"><div class="opt-label">Entra mucha luz y el cuarto se calienta demasiado</div><div class="opt-desc">Me despierto a las 5am sin querer</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="todo"><div class="opt-ico">🏚️</div><div class="opt-body"><div class="opt-label">Todo junto: mi cuarto necesita una renovaci&oacute;n completa</div><div class="opt-desc">Nada combina, nada funciona bien</div></div><div class="opt-chk"></div></button>
+        </div>
+        <button class="back-btn" onclick="qBack()">&larr; Volver</button>
+    </div>
+
+    <!-- Q3: Intentos previos -->
+    <div id="q3" style="display:none">
+        <div class="q-count"><span>03</span> &middot; Tu experiencia</div>
+        <h2 class="q-t">&iquest;Has intentado <em>resolver esto</em> antes?</h2>
+        <p class="q-s">No hay respuesta mala</p>
+        <div class="opts" data-q="intentos">
+            <button class="opt" data-v="muchos"><div class="opt-ico">🔄</div><div class="opt-body"><div class="opt-label">S&iacute;, he comprado varias cosas y nada funciona</div><div class="opt-desc">Gast&eacute; plata en productos que decepcionaron</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="algunos"><div class="opt-ico">🤷</div><div class="opt-body"><div class="opt-label">Algo he intentado pero no con productos buenos</div><div class="opt-desc">Compr&eacute; lo m&aacute;s barato y no sirvi&oacute;</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="nada"><div class="opt-ico">🆕</div><div class="opt-body"><div class="opt-label">Nunca he buscado una soluci&oacute;n real</div><div class="opt-desc">No sab&iacute;a ni por d&oacute;nde empezar</div></div><div class="opt-chk"></div></button>
+        </div>
+        <button class="back-btn" onclick="qBack()">&larr; Volver</button>
+    </div>
+
+    <!-- Q4: Impacto emocional -->
+    <div id="q4" style="display:none">
+        <div class="q-count"><span>04</span> &middot; El impacto</div>
+        <h2 class="q-t">&iquest;C&oacute;mo te <em>hace sentir</em> esto?</h2>
+        <p class="q-s">Tu respuesta nos dice mucho</p>
+        <div class="opts" data-q="impacto">
+            <button class="opt" data-v="agotado"><div class="opt-ico">😩</div><div class="opt-body"><div class="opt-label">Agotado: ya no descanso como antes</div><div class="opt-desc">Mi energ&iacute;a durante el d&iacute;a baj&oacute; much&iacute;simo</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="frustrado"><div class="opt-ico">😤</div><div class="opt-body"><div class="opt-label">Frustrado: gasto plata y nada cambia</div><div class="opt-desc">Siento que tiro la plata a la basura</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="resignado"><div class="opt-ico">😶</div><div class="opt-body"><div class="opt-label">Resignado: ya me acostumbr&eacute; a dormir mal</div><div class="opt-desc">Creo que as&iacute; son las cosas</div></div><div class="opt-chk"></div></button>
+        </div>
+        <button class="back-btn" onclick="qBack()">&larr; Volver</button>
+    </div>
+
+    <!-- Q5: Zona -->
+    <div id="q5" style="display:none">
+        <div class="q-count"><span>05</span> &middot; &Uacute;ltima &middot; Tu zona</div>
+        <h2 class="q-t">&iquest;Desde d&oacute;nde <em>nos escribes?</em></h2>
+        <p class="q-s">Para validar entrega y stock</p>
+        <div class="opts" data-q="zona">
+            <button class="opt" data-v="bogota"><div class="opt-ico">🏙️</div><div class="opt-body"><div class="opt-label">Bogot&aacute;</div><div class="opt-desc">Entrega 1-2 d&iacute;as</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="medellin"><div class="opt-ico">🏔️</div><div class="opt-body"><div class="opt-label">Medell&iacute;n &middot; Antioquia</div><div class="opt-desc">Entrega 2-3 d&iacute;as</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="cali"><div class="opt-ico">🌴</div><div class="opt-body"><div class="opt-label">Cali &middot; Valle</div><div class="opt-desc">Entrega 2-3 d&iacute;as</div></div><div class="opt-chk"></div></button>
+            <button class="opt" data-v="otra"><div class="opt-ico">📍</div><div class="opt-body"><div class="opt-label">Otra ciudad de Colombia</div><div class="opt-desc">Entrega 3-6 d&iacute;as</div></div><div class="opt-chk"></div></button>
+        </div>
+        <button class="back-btn" onclick="qBack()">&larr; Volver</button>
+    </div>
+
+    <button class="btn" id="startBtn" onclick="startQuiz()" style="animation:fadeUp .6s var(--ef) .5s both">
+        <span>Descubrir mi tipo de descanso</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg>
+    </button>
 </div>
 
-<div class="floating" id="floatingCTA"><div class="floating-in"><div class="floating-text">¿Listo? <em>Ve a la tienda</em></div><a class="floating-btn" href="https://litper.store" target="_blank"><span>🛒</span>Tienda</a></div></div>
+<!-- ==================== SLIDE 1: LOADING ==================== -->
+<div class="slide" id="s-load">
+    <div class="loading">
+        <div class="orbital"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div><div class="orb-core"></div></div>
+        <h2 class="load-t">Analizando tu <em>perfil de descanso</em></h2>
+        <p class="load-s">Procesando respuestas</p>
+        <div class="load-steps">
+            <div class="lstep done" id="ls1"><div class="lstep-i" data-n="1"></div><span>Evaluando rutina nocturna</span></div>
+            <div class="lstep" id="ls2"><div class="lstep-i" data-n="2"></div><span>Identificando tipo</span></div>
+            <div class="lstep" id="ls3"><div class="lstep-i" data-n="3"></div><span>Calculando brecha</span></div>
+            <div class="lstep" id="ls4"><div class="lstep-i" data-n="4"></div><span>Generando diagn&oacute;stico</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 2: BRECHA EMOCIONAL ==================== -->
+<div class="slide" id="s-brecha">
+    <div class="brecha">
+        <div class="brecha-type"><span class="dot"></span><span id="brechaTypeLabel">Tu resultado</span></div>
+        <span class="brecha-icon" id="brechaIcon">🌀</span>
+        <h2 class="brecha-title" id="brechaTitle">Tu tipo: <em>Dormidor Inquieto</em></h2>
+        <p class="brecha-desc" id="brechaDesc">Loading...</p>
+
+        <div class="brecha-stat">
+            <div class="brecha-stat-num" id="brechaStat">73%</div>
+            <div class="brecha-stat-label" id="brechaStatLabel">de las personas con tu perfil pierden hasta 2 horas de sue&ntilde;o real por noche</div>
+        </div>
+
+        <div class="brecha-consequence">
+            <div class="brecha-consequence-icon">⚠️</div>
+            <div class="brecha-consequence-text" id="brechaConsequence">Si no haces nada, <strong>esto solo empeora</strong>. Cada noche sin soluci&oacute;n es energ&iacute;a que pierdes y que no recuperas.</div>
+        </div>
+
+        <div class="brecha-solution">
+            <div class="brecha-solution-icon">💡</div>
+            <div class="brecha-solution-text" id="brechaSolution">La buena noticia: <strong>hay una soluci&oacute;n espec&iacute;fica para tu tipo</strong>. Y es m&aacute;s simple de lo que piensas.</div>
+        </div>
+
+        <button class="btn" onclick="showRuta()">
+            <span>Ver mi soluci&oacute;n personalizada</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg>
+        </button>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 3: RUTA DE ESCAPE (PRODUCTO) ==================== -->
+<div class="slide" id="s-ruta">
+    <div class="ruta">
+        <div class="ruta-connection" id="rutaConnection">Para tu tipo: Dormidor Inquieto</div>
+
+        <div class="ruta-product">
+            <div class="ruta-ico" id="rutaIco">🛡️</div>
+            <h2 class="ruta-name" id="rutaName">Protector de colch&oacute;n <em>Premium</em></h2>
+            <div class="ruta-mechanism" id="rutaMechanism">Mecanismo &uacute;nico: Termosellado 360&deg;</div>
+            <div class="ruta-benefits" id="rutaBenefits">
+                <div class="ruta-ben">Antifluido alta resistencia</div>
+                <div class="ruta-ben">Termosellado 360&deg; sin costuras</div>
+                <div class="ruta-ben">Hipoalerg&eacute;nico &mdash; adi&oacute;s &aacute;caros</div>
+            </div>
+        </div>
+
+        <div class="slabel">Testimonios reales</div>
+        <div class="ruta-testimonials" id="rutaTestimonials">
+            <div class="ruta-testi">
+                <div class="ruta-testi-text">"Llevaba meses buscando algo as&iacute;. Desde que lo tengo, mi colch&oacute;n est&aacute; como nuevo."</div>
+                <div class="ruta-testi-author"><span class="ruta-testi-stars">★★★★★</span> Mar&iacute;a C. &middot; Bogot&aacute;</div>
+            </div>
+            <div class="ruta-testi">
+                <div class="ruta-testi-text">"Lo mejor es que no cambia la sensaci&oacute;n del colch&oacute;n. Duermes igual pero protegido."</div>
+                <div class="ruta-testi-author"><span class="ruta-testi-stars">★★★★★</span> Carlos R. &middot; Medell&iacute;n</div>
+            </div>
+        </div>
+
+        <a class="btn-wa" id="rutaCTA" href="#" target="_blank">
+            <span>💬</span>
+            <span>Quiero el m&iacute;o &rarr; Esc&iacute;benos por WhatsApp</span>
+        </a>
+
+        <div class="proof" style="margin-top:24px">
+            <div class="proof-avs"><div class="proof-av">MC</div><div class="proof-av">JR</div><div class="proof-av">LT</div><div class="proof-av">+15K</div></div>
+            <div class="proof-text"><strong>+15.000 familias</strong> colombianas conf&iacute;an en Litper &middot; <em>&ldquo;Cambi&oacute; mi descanso&rdquo;</em></div>
+        </div>
+
+        <div class="slabel">Tambi&eacute;n te puede interesar</div>
+        <div class="others-grid" id="othersGrid"></div>
+
+        <div class="gars">
+            <div class="gar"><div class="gar-ico">🛡️</div><div class="gar-t">Garant&iacute;a<br>3 meses</div><div class="gar-d">Devuelve si no funciona</div></div>
+            <div class="gar"><div class="gar-ico">💳</div><div class="gar-t">Contra<br>entrega</div><div class="gar-d">Pagas al recibir</div></div>
+            <div class="gar"><div class="gar-ico">🚚</div><div class="gar-t">Env&iacute;o<br>gratis</div><div class="gar-d">A todo Colombia</div></div>
+        </div>
+
+        <div class="slabel" style="margin-top:28px">Preguntas frecuentes</div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;C&oacute;mo funciona pago contra entrega?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">La transportadora llega a tu direcci&oacute;n, te entregan el producto y <strong>pagas en ese momento</strong>. No pagas nada antes.</div></div></div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Cu&aacute;nto tarda la entrega?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in"><strong>Bogot&aacute;:</strong> 1-2 d&iacute;as. <strong>Medell&iacute;n, Cali:</strong> 2-3 d&iacute;as. <strong>Otras:</strong> 3-6 d&iacute;as.</div></div></div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Qu&eacute; incluye la garant&iacute;a de 3 meses?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Si no cumple lo que prometemos, te devolvemos <strong>la plata completa y te quedas con el producto</strong>. Riesgo cero.</div></div></div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Por qu&eacute; es diferente a lo que venden en otros lados?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Nuestros productos son <strong>Premium verificados</strong> con tecnolog&iacute;a exclusiva. No son los mismos que encuentras en cualquier tienda. Por eso damos garant&iacute;a real.</div></div></div>
+
+        <footer class="footer"><span>LITPER &copy; 2026</span><span>Colombia 🇨🇴</span><span>litper.store</span></footer>
+    </div>
+</div>
+</div>
 
 <script>
 const WA='573022658970';
+const TOTAL_Q=5;
+const Q={step:0,answers:{}};
 
-const URLS={
-    protector:'https://litper.store/products/protector-colchon-antifluido-paga-1-lleva-6',
-    sabanas:'https://litper.store/products/sabanas-premium-microfibra-paga-1-lleva-2',
-    cortinas:'https://litper.store/products/cortina-blackout-prmeium',
-    cobijas:'https://litper.store/products/cobija-acanalada-premium-manta-tejida-gruesa'
+/* ============ TIPOS DE RESULTADO (FUNNEL 400) ============ */
+const TIPOS={
+    inquieto:{
+        key:'inquieto',
+        icon:'🌀',
+        name:'Dormidor Inquieto',
+        desc:'Te mueves mucho de noche, te despiertas cansado y tus sabanas terminan enredadas. <strong>Tu cuerpo no encuentra comodidad</strong> porque tu ropa de cama no esta disenada para tu forma de dormir.',
+        stat:'73%',
+        statLabel:'de las personas con tu perfil pierden hasta 2 horas de sueno real cada noche',
+        consequence:'Cada noche de mal sueno acumula <strong>fatiga cronica</strong>. En 6 meses tu rendimiento baja un 40% y tu humor cambia sin que te des cuenta. No es que "duermas mal" — es que tu cama te esta saboteando.',
+        solution:'Para tu tipo, la solucion no es cambiar de colchon. Es <strong>cambiar lo que toca tu piel</strong>: sabanas de 600 hilos que no se enredan, no hacen bolitas y abrazan tu cuerpo.',
+        product:'sabanas',
+        mechanism:'Tecnologia Anti-Pilling 600 Hilos'
+    },
+    protector:{
+        key:'protector',
+        icon:'💧',
+        name:'Guardian Preocupado',
+        desc:'Vives con miedo de que tu colchon se dane. <strong>Manchas, liquidos, acaros</strong> — sabes que cada dia sin proteccion es un dia mas de dano invisible que no puedes revertir.',
+        stat:'$2.8M',
+        statLabel:'es lo que cuesta un colchon nuevo. Sin proteccion, el tuyo pierde 30% de vida util cada ano',
+        consequence:'Los acaros se duplican cada 3 meses en un colchon sin proteccion. <strong>Las manchas penetran las fibras</strong> y generan olores y bacterias que ningun lavado elimina. En 2 anos, tu colchon se vuelve irrecuperable.',
+        solution:'Tu colchon necesita una <strong>barrera invisible de proteccion total</strong>. El termosellado 360 grados sella cada fibra sin cambiar la sensacion al dormir.',
+        product:'protector',
+        mechanism:'Termosellado 360 Grados Antifluido'
+    },
+    sensible:{
+        key:'sensible',
+        icon:'👁️',
+        name:'Dormidor Sensible',
+        desc:'Eres hipersensible a tu entorno. <strong>La luz, la temperatura y el ruido</strong> te despiertan facilmente. Tu cuarto no esta disenado para proteger tu sueno — esta disenado contra ti.',
+        stat:'8°C',
+        statLabel:'menos de temperatura y 100% de oscuridad: eso es lo que tu tipo de sueno necesita',
+        consequence:'Cada despertar prematuro por luz o calor <strong>rompe tu ciclo REM</strong>. Duermes 7 horas pero descansas como si fueran 4. Tu cerebro nunca llega al sueno profundo reparador.',
+        solution:'Para tu tipo, la solucion es <strong>controlar tu entorno</strong>. Cortinas que bloquean 100% de la luz y bajan la temperatura hasta 8 grados.',
+        product:'cortinas',
+        mechanism:'Triple Barrera: Luz + Calor + Ruido'
+    },
+    frio:{
+        key:'frio',
+        icon:'🥶',
+        name:'Buscador de Calor',
+        desc:'Pasas frio cada noche y ninguna cobija parece suficiente. <strong>Tu cuerpo pierde calor</strong> mas rapido de lo que tu ropa de cama puede retener.',
+        stat:'45min',
+        statLabel:'tarda una persona con frio en alcanzar sueno profundo vs 12 min con la temperatura correcta',
+        consequence:'Dormir con frio <strong>contrae tus musculos toda la noche</strong>. Te despiertas con tension, dolor de espalda y agotamiento. Tu cuerpo gasta energia en calentarse en vez de recuperarse.',
+        solution:'No necesitas "mas cobijas". Necesitas <strong>la cobija correcta</strong>: tejida gruesa que retiene calor corporal sin peso excesivo.',
+        product:'cobijas',
+        mechanism:'Tejido Acanalado de Retencion Termica'
+    },
+    total:{
+        key:'total',
+        icon:'🏚️',
+        name:'Cuarto en Modo Supervivencia',
+        desc:'Tu cuarto tiene multiples problemas al mismo tiempo. <strong>No es un solo producto lo que falla</strong> — es todo el ecosistema de tu descanso que necesita reset completo.',
+        stat:'12',
+        statLabel:'dias completos al ano pierdes en mal descanso acumulado cuando todo falla a la vez',
+        consequence:'Cuando todo falla a la vez, <strong>arreglar una cosa no basta</strong>. Comprar solo sabanas o solo un protector es como ponerle una curita a una herida que necesita cirugia. El problema se mantiene.',
+        solution:'Para tu tipo, la unica solucion real es <strong>el reset completo</strong>. Los 3 productos trabajando juntos crean un sistema que transforma tu cuarto de supervivencia a santuario.',
+        product:'kit',
+        mechanism:'Sistema Completo Litper: Proteccion + Comfort + Control'
+    }
 };
 
+/* ============ PRODUCTOS ============ */
 const PRODUCTS={
-    protector:{key:'protector',ico:'🛡️',name:'Protector de colchón <em>Premium</em>',price:'$164.900',priceNote:'Paga 1 Lleva 6',benefits:['Antifluido alta resistencia','Termosellado 360° sin costuras','Hipoalergénico — adiós ácaros'],desc:'Antifluido · Termosellado · Hipoalergénico',whyMap:{manchas:'Dijiste que tu colchón se está dañando. El sistema <strong>Termosellado 360°</strong> lo protege sin cambiar la sensación al dormir.',_default:'El protector con <strong>Termosellado 360°</strong> es la base de un buen descanso.'}},
-    sabanas:{key:'sabanas',ico:'🛏️',name:'Pack sábanas <em>Premium</em>',price:'$139.900',priceNote:'Paga 1 Lleva 2 packs',benefits:['600 hilos — suaves como hotel 5★','Anti-pilling — no hacen bolitas','Elástico profundo — no se sueltan'],desc:'600 hilos · Suaves · Anti-pilling',whyMap:{cama:'Dijiste que tu cama no es cómoda. Unas sábanas de <strong>600 hilos</strong> transforman la experiencia.',_default:'Las sábanas de <strong>600 hilos</strong> hacen que cualquier cama se sienta como hotel de lujo.'}},
-    cortinas:{key:'cortinas',ico:'🪟',name:'Cortinas <em>Blackout</em>',price:'$149.900',priceNote:'Premium Triple Barrera',benefits:['Bloquea 100% de la luz solar','Baja hasta 8°C la temperatura','Sistema Triple Barrera Litper™'],desc:'100% oscuridad · -8°C · Triple Barrera',whyMap:{luz:'Dijiste que la luz te despierta. Las cortinas <strong>Triple Barrera</strong> bloquean 100% de la luz y bajan 8°C tu cuarto.',_default:'Las cortinas Blackout <strong>Triple Barrera</strong> eliminan luz, calor y ruido de un solo golpe.'}},
-    cobijas:{key:'cobijas',ico:'🧣',name:'Cobija Acanalada <em>Premium</em>',price:'$129.900',priceNote:'Manta tejida gruesa',benefits:['Ultra suave acanalada','Tejida gruesa — doble calor','Ligera pero muy abrigadora'],desc:'Acanalada · Tejida gruesa · Ultra suave',whyMap:{frio:'Dijiste que pasas frío. La cobija acanalada <strong>tejida gruesa</strong> retiene tu calor sin sentirte pesado.',_default:'La cobija acanalada <strong>tejida gruesa</strong> es ultra suave y perfecta para noches frías.'}}
+    protector:{key:'protector',ico:'🛡️',name:'Protector de colchon <em>Premium</em>',mechanism:'Termosellado 360 Grados',benefits:['Antifluido alta resistencia — cero liquidos','Termosellado 360 sin costuras expuestas','Hipoalergenico — elimina acaros y bacterias'],testimonials:[{text:'"Llevaba meses buscando algo asi. Desde que lo tengo, mi colchon esta como nuevo."',author:'Maria C.',city:'Bogota'},{text:'"Lo mejor es que no cambia la sensacion del colchon. Duermes igual pero protegido."',author:'Carlos R.',city:'Medellin'}]},
+    sabanas:{key:'sabanas',ico:'🛏️',name:'Pack sabanas <em>Premium</em>',mechanism:'600 Hilos Anti-Pilling',benefits:['600 hilos — suaves como hotel 5 estrellas','Anti-pilling: no hacen bolitas nunca','Elastico profundo — no se sueltan de noche'],testimonials:[{text:'"Nunca habia dormido en sabanas asi. Se siente como estar en un hotel de lujo."',author:'Laura M.',city:'Bogota'},{text:'"Llevo 4 meses y estan como nuevas. Cero bolitas. Super recomendadas."',author:'Andres P.',city:'Cali'}]},
+    cortinas:{key:'cortinas',ico:'🪟',name:'Cortinas <em>Blackout</em>',mechanism:'Triple Barrera Litper',benefits:['Bloquea 100% de la luz solar','Baja hasta 8 grados la temperatura','Sistema Triple Barrera: luz + calor + ruido'],testimonials:[{text:'"Mi cuarto parecia un horno. Desde que las puse, bajo la temperatura increible."',author:'Diana V.',city:'Barranquilla'},{text:'"Por fin puedo dormir hasta tarde sin que la luz me despierte a las 5am."',author:'Jorge L.',city:'Medellin'}]},
+    cobijas:{key:'cobijas',ico:'🧣',name:'Cobija Acanalada <em>Premium</em>',mechanism:'Tejido Acanalado Termico',benefits:['Ultra suave textura acanalada premium','Tejida gruesa — retiene el doble de calor','Ligera pero abrigan como ninguna otra'],testimonials:[{text:'"Es la cobija mas rica que he tenido. Abriga mucho y no pesa."',author:'Valentina S.',city:'Bogota'},{text:'"Mis hijos me la quieren quitar siempre. Tuve que comprar otra para ellos."',author:'Felipe G.',city:'Pereira'}]},
+    kit:{key:'kit',ico:'✨',name:'Kit Cuarto <em>Perfecto</em>',mechanism:'Sistema Completo Litper',benefits:['Protector + Sabanas + Cortinas juntos','Sistema disenado para trabajar en conjunto','Transformacion completa de tu cuarto'],testimonials:[{text:'"Compre el kit completo y fue la mejor decision. Mi cuarto es otro."',author:'Natalia H.',city:'Bogota'},{text:'"Era esceptico pero la diferencia se siente desde la primera noche."',author:'Ricardo M.',city:'Cali'}]}
 };
 
-const Q={step:0,answers:{},total:4};
-
-function startQuiz(){Q.step=1;document.getElementById('heroBlock').style.display='none';document.getElementById('startBtn').style.display='none';document.getElementById('progBlock').style.display='block';document.getElementById('q1').style.display='block';updateProg()}
-function qNext(){if(Q.step<Q.total){document.getElementById('q'+Q.step).style.display='none';Q.step++;document.getElementById('q'+Q.step).style.display='block';updateProg()}else{showLoading()}}
-function qBack(){if(Q.step>1){document.getElementById('q'+Q.step).style.display='none';Q.step--;document.getElementById('q'+Q.step).style.display='block';updateProg()}}
-function updateProg(){const p=Math.round((Q.step/Q.total)*100);document.getElementById('qFill').style.width=p+'%';document.getElementById('qN').textContent=Q.step;document.getElementById('qPct').textContent=p}
-
-document.querySelectorAll('.opts').forEach(o=>{const q=o.dataset.q;o.addEventListener('click',e=>{const opt=e.target.closest('.opt');if(!opt)return;o.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));opt.classList.add('sel');Q.answers[q]=opt.dataset.v;setTimeout(()=>qNext(),350)})});
-
-function showLoading(){switchSlide('s-load');setTimeout(()=>document.getElementById('ls2').classList.add('done'),700);setTimeout(()=>document.getElementById('ls3').classList.add('done'),1400);setTimeout(()=>document.getElementById('ls4').classList.add('done'),2100);setTimeout(()=>showResults(),2800)}
-function switchSlide(id){document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
-
-function calcScores(){const a=Q.answers;const u=a.urgencia==='alta'?1.3:a.urgencia==='media'?1:0.8;const b=a.budget==='alto'?10:a.budget==='medio'?5:0;const s={protector:10+(a.dolor==='manchas'?30:a.dolor==='todo'?12:5)+b,sabanas:10+(a.dolor==='cama'?30:a.dolor==='todo'?12:5)+b,cortinas:10+(a.dolor==='luz'?30:a.dolor==='todo'?12:5)+b,cobijas:10+(a.dolor==='frio'?30:a.dolor==='todo'?12:3)+Math.min(b,5),kit:20+(a.dolor==='todo'?40:10)+(a.budget==='alto'?20:a.budget==='medio'?10:0)};Object.keys(s).forEach(k=>{s[k]=Math.round(s[k]*(k==='kit'?(a.dolor==='todo'?1.5:1)*u:u))});return s}
-function scoreToMatch(s,m){return Math.max(52,Math.min(98,Math.round((s/m)*100)))}
-
-function showResults(){
-    const scores=calcScores();const dolor=Q.answers.dolor;
-    const keys=['protector','sabanas','cortinas','cobijas'];
-    const sorted=[...keys].sort((a,b)=>scores[b]-scores[a]);
-    const maxS=Math.max(...keys.map(k=>scores[k]));
-
-    const wk=sorted[0];const w=PRODUCTS[wk];const wp=scoreToMatch(scores[wk],maxS);
-    const why=w.whyMap[dolor]||w.whyMap._default;
-
-    document.getElementById('matchIco').textContent=w.ico;
-    document.getElementById('matchName').innerHTML=w.name;
-    document.getElementById('matchPct').textContent=wp+'%';
-    document.getElementById('matchWhy').innerHTML=`<span class="match-why-label">Por qué te lo recomendamos</span>${why}`;
-    document.getElementById('matchBenefits').innerHTML=w.benefits.map(b=>`<div class="match-ben">${b}</div>`).join('');
-    document.getElementById('matchPriceNum').textContent=w.price;
-    document.getElementById('matchPriceDiv').innerHTML=`Desde <b>${w.price}</b> · ${w.priceNote}`;
-    
-    const matchBtn=document.getElementById('matchBtn');
-    matchBtn.href=URLS[wk];
-    matchBtn.target='_blank';
-
-    const runners=sorted.slice(1,4);
-    document.getElementById('runnersGrid').innerHTML=runners.map(key=>{
-        const p=PRODUCTS[key];const pct=scoreToMatch(scores[key],maxS);
-        return `<a class="runner" href="${URLS[key]}" target="_blank"><div class="runner-top"><span class="runner-ico">${p.ico}</span><span class="runner-score">${pct}%</span></div><div class="runner-name">${p.name}</div><div class="runner-desc">${p.desc}</div><div class="runner-price">Desde <b>${p.price}</b></div><div class="runner-cta">🛒 Ver producto →</div></a>`
-    }).join('');
-
-    const bh=scores.kit>60||Q.answers.dolor==='todo'||Q.answers.budget==='alto';
-    if(bh){document.getElementById('bundleCard').classList.add('highlight');document.getElementById('bundleRec').style.display='inline-flex'}
-    switchSlide('s-results');
-    if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Litper Quiz V6',content_category:wk});
+/* ============ QUIZ LOGIC ============ */
+function startQuiz(){
+    Q.step=1;
+    document.getElementById('heroBlock').style.display='none';
+    document.getElementById('startBtn').style.display='none';
+    document.getElementById('progBlock').style.display='block';
+    document.getElementById('q1').style.display='block';
+    updateProg();
+    if(typeof fbq!=='undefined')fbq('trackCustom','quiz_start');
 }
 
-function goKit(){window.open(`https://wa.me/${WA}?text=${encodeURIComponent('Mas info del Kit Cuarto Perfecto de $199.900')}`,'_blank')}
+function qNext(){
+    if(Q.step<TOTAL_Q){
+        document.getElementById('q'+Q.step).style.display='none';
+        Q.step++;
+        document.getElementById('q'+Q.step).style.display='block';
+        updateProg();
+        if(typeof fbq!=='undefined')fbq('trackCustom','quiz_step_'+Q.step);
+    }else{
+        showLoading();
+        if(typeof fbq!=='undefined')fbq('trackCustom','quiz_complete',{tipo:classifyType()});
+    }
+}
+
+function qBack(){
+    if(Q.step>1){
+        document.getElementById('q'+Q.step).style.display='none';
+        Q.step--;
+        document.getElementById('q'+Q.step).style.display='block';
+        updateProg();
+    }
+}
+
+function updateProg(){
+    const p=Math.round((Q.step/TOTAL_Q)*100);
+    document.getElementById('qFill').style.width=p+'%';
+    document.getElementById('qN').textContent=Q.step;
+    document.getElementById('qPct').textContent=p;
+}
+
+document.querySelectorAll('.opts').forEach(o=>{
+    const q=o.dataset.q;
+    o.addEventListener('click',e=>{
+        const opt=e.target.closest('.opt');
+        if(!opt)return;
+        o.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
+        opt.classList.add('sel');
+        Q.answers[q]=opt.dataset.v;
+        setTimeout(()=>qNext(),400);
+    });
+});
+
+/* ============ CLASSIFICATION ============ */
+function classifyType(){
+    const a=Q.answers;
+    // Primary classification based on frustration + routine
+    if(a.frustracion==='todo') return 'total';
+    if(a.frustracion==='colchon') return 'protector';
+    if(a.frustracion==='sabanas') return 'inquieto';
+    if(a.frustracion==='luz') return 'sensible';
+    // Fallback to routine
+    if(a.rutina==='frio') return 'frio';
+    if(a.rutina==='inquieto') return 'inquieto';
+    if(a.rutina==='ligero') return 'sensible';
+    if(a.rutina==='preocupado') return 'protector';
+    return 'inquieto'; // default
+}
+
+/* ============ LOADING ============ */
+function showLoading(){
+    switchSlide('s-load');
+    setTimeout(()=>document.getElementById('ls2').classList.add('done'),700);
+    setTimeout(()=>document.getElementById('ls3').classList.add('done'),1400);
+    setTimeout(()=>document.getElementById('ls4').classList.add('done'),2100);
+    setTimeout(()=>showBrecha(),2800);
+}
+
+function switchSlide(id){
+    document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ============ BRECHA EMOCIONAL ============ */
+function showBrecha(){
+    const tipo=classifyType();
+    const t=TIPOS[tipo];
+
+    document.getElementById('brechaTypeLabel').textContent='Tu tipo: '+t.name;
+    document.getElementById('brechaIcon').textContent=t.icon;
+    document.getElementById('brechaTitle').innerHTML='Tu tipo: <em>'+t.name+'</em>';
+    document.getElementById('brechaDesc').innerHTML=t.desc;
+    document.getElementById('brechaStat').textContent=t.stat;
+    document.getElementById('brechaStatLabel').textContent=t.statLabel;
+    document.getElementById('brechaConsequence').innerHTML=t.consequence;
+    document.getElementById('brechaSolution').innerHTML=t.solution;
+
+    switchSlide('s-brecha');
+    if(typeof fbq!=='undefined')fbq('trackCustom','result_view',{tipo:tipo});
+}
+
+/* ============ RUTA DE ESCAPE ============ */
+function showRuta(){
+    const tipo=classifyType();
+    const t=TIPOS[tipo];
+    const p=PRODUCTS[t.product];
+
+    // Connection badge
+    document.getElementById('rutaConnection').textContent='Para tu tipo: '+t.name;
+
+    // Product info
+    document.getElementById('rutaIco').textContent=p.ico;
+    document.getElementById('rutaName').innerHTML=p.name;
+    document.getElementById('rutaMechanism').textContent='Mecanismo unico: '+p.mechanism;
+    document.getElementById('rutaBenefits').innerHTML=p.benefits.map(b=>'<div class="ruta-ben">'+b+'</div>').join('');
+
+    // Testimonials
+    document.getElementById('rutaTestimonials').innerHTML=p.testimonials.map(t=>
+        '<div class="ruta-testi"><div class="ruta-testi-text">"'+t.text.replace(/"/g,'')+'"</div><div class="ruta-testi-author"><span class="ruta-testi-stars">★★★★★</span> '+t.author+' &middot; '+t.city+'</div></div>'
+    ).join('');
+
+    // WhatsApp CTA with quiz context
+    const waMsg=encodeURIComponent('Hola! Hice el test y soy tipo '+t.name+'. Quiero info del '+p.name.replace(/<[^>]*>/g,'')+' para mi cuarto');
+    document.getElementById('rutaCTA').href='https://wa.me/'+WA+'?text='+waMsg;
+
+    // Others grid (products NOT the main one)
+    const otherKeys=Object.keys(PRODUCTS).filter(k=>k!==t.product && k!=='kit');
+    document.getElementById('othersGrid').innerHTML=otherKeys.map(k=>{
+        const op=PRODUCTS[k];
+        const waOther=encodeURIComponent('Hola! Soy tipo '+t.name+' y quiero info del '+op.name.replace(/<[^>]*>/g,''));
+        return '<a class="others-card" href="https://wa.me/'+WA+'?text='+waOther+'" target="_blank"><div class="others-ico">'+op.ico+'</div><div class="others-name">'+op.name+'</div><div class="others-cta">💬 Preguntar &rarr;</div></a>';
+    }).join('');
+
+    switchSlide('s-ruta');
+    if(typeof fbq!=='undefined')fbq('trackCustom','product_click',{tipo:tipo,product:t.product});
+}
+
 function toggleFAQ(el){el.classList.toggle('open')}
-window.addEventListener('scroll',()=>{document.getElementById('floatingCTA').classList.toggle('visible',window.scrollY>400)});
 </script>
 </body>
 </html>
