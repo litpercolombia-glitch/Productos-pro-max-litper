@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Litper · Descubre Tu Tipo de Descanso</title>
+<title>Litper · Descubre Tu Tipo de Descanso · Bono $10.000</title>
 <meta name="description" content="Quiz de autodescubrimiento: descubre tu perfil de descanso y la solución exacta para transformar tu cuarto en 40 segundos.">
 <meta name="theme-color" content="#04060A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +66,26 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
 .footer{text-align:center;padding:40px 0 40px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--bone-50);letter-spacing:.15em;text-transform:uppercase;border-top:1px solid var(--bone-10);margin-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-weight:500}
 /* Others grid */
 .others-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.others-card{background:var(--bone-05);border:1px solid var(--bone-10);border-radius:16px;padding:16px;cursor:pointer;transition:all .25s var(--ef);text-align:center;font-family:inherit;color:var(--bone);width:100%;text-decoration:none;display:block}.others-card:hover{border-color:var(--bone-20);background:var(--bone-10);transform:translateY(-2px)}.others-ico{font-size:28px;margin-bottom:8px}.others-name{font-family:'Fraunces',serif;font-weight:500;font-size:14px;color:var(--bone);margin-bottom:4px}.others-name em{font-style:italic;font-weight:400;color:var(--gold)}.others-cta{font-size:10px;font-weight:600;color:var(--jade);font-family:'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:4px}
+
+/* ===== V7: reencuadre, premio, catalogo ===== */
+.reframe{animation:scaleIn .5s var(--ef)}.reframe-k{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);padding:8px 16px;background:var(--gold-s);border-radius:100px;margin-bottom:22px;border:1px solid rgba(212,168,87,.3)}
+.reframe-t{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(30px,8.5vw,44px);line-height:1.04;letter-spacing:-.03em;margin-bottom:18px}.reframe-t em{font-style:italic;font-weight:400;color:var(--gold)}.reframe-p{font-size:16px;line-height:1.65;color:var(--bone-70);margin-bottom:28px}.reframe-p strong{color:var(--bone)}
+.premio{animation:scaleIn .5s var(--ef);text-align:center}.premio-t{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,8vw,40px);line-height:1.05;letter-spacing:-.03em;margin-bottom:10px}.premio-t em{font-style:italic;color:var(--gold);font-weight:400}.premio-s{font-size:14px;color:var(--bone-70);margin-bottom:22px;font-family:'JetBrains Mono',monospace;letter-spacing:.04em}
+.scratch{position:relative;width:100%;max-width:360px;height:190px;margin:0 auto 18px;border-radius:22px;overflow:hidden;border:1px solid rgba(212,168,87,.45);box-shadow:0 20px 50px rgba(0,0,0,.45),0 0 40px rgba(212,168,87,.18)}
+.scratch-prize{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--carbon),var(--obsidian));gap:6px}.scratch-amt{font-family:'Fraunces',serif;font-weight:700;font-size:54px;color:var(--gold);line-height:1;letter-spacing:-.03em}.scratch-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-70)}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;transition:opacity .6s var(--ef)}.scratch canvas.gone{opacity:0;pointer-events:none}
+.scratch-hint{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--bone-50);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+.link-btn{background:none;border:none;color:var(--bone-70);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:underline;cursor:pointer;margin:-6px auto 18px;display:block}
+.codebox{display:none;align-items:center;justify-content:space-between;gap:10px;background:var(--bone-05);border:1.5px dashed var(--gold);border-radius:16px;padding:14px 16px;margin:0 auto 12px;max-width:360px}.codebox.show{display:flex;animation:fadeUp .4s var(--ef)}.codebox-code{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:18px;letter-spacing:.08em;color:var(--gold-b)}.codebox-btn{background:var(--gold);color:var(--void);border:none;border-radius:100px;padding:9px 14px;font-weight:700;font-size:12px;font-family:inherit;cursor:pointer}
+.codebox-note{font-size:12px;color:var(--bone-50);line-height:1.5;max-width:360px;margin:0 auto 22px;display:none}.codebox-note.show{display:block}
+#premioNext{display:none}#premioNext.show{display:flex}
+.btn-shop{text-decoration:none;margin-bottom:12px}
+.btn-wa-sec{background:transparent;border:1px solid rgba(37,211,102,.5);color:#6BE59A;box-shadow:none;padding:16px 20px;font-size:14px}
+.offer-chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--void);background:linear-gradient(135deg,var(--gold),var(--gold-b));padding:6px 12px;border-radius:100px;margin-bottom:14px;position:relative;z-index:1}
+.ruta-img{width:100%;border-radius:16px;margin-bottom:18px;display:block;position:relative;z-index:1}
+.bono-strip{display:flex;align-items:center;gap:12px;background:var(--gold-s);border:1px solid rgba(212,168,87,.35);border-radius:14px;padding:12px 14px;margin-bottom:16px;font-size:13px;color:var(--bone)}.bono-strip b{font-family:'JetBrains Mono',monospace;color:var(--gold-b);letter-spacing:.06em}
+.cat-offer{font-size:10px;color:var(--gold);font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;line-height:1.35;min-height:26px}
+.gars{grid-template-columns:repeat(3,1fr)}
 @media(min-width:768px){.app{padding:40px 32px 60px;max-width:640px}}
 @media(max-width:380px){.others-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
@@ -81,11 +101,12 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
     <div class="hero" id="heroBlock">
         <div class="hero-eye">Test de autodescubrimiento &middot; 50 seg</div>
         <h1>Descubre tu <em>tipo de descanso.</em></h1>
-        <p>Responde 5 preguntas y descubre <strong>qu&eacute; est&aacute; saboteando tu sue&ntilde;o</strong> sin que lo sepas. M&aacute;s de <strong>15.000 familias</strong> colombianas ya lo hicieron.</p>
+        <p>Responde 5 preguntas y descubre <strong>qu&eacute; est&aacute; saboteando tu sue&ntilde;o</strong> sin que lo sepas. Litper despacha <strong>m&aacute;s de 2.000 pedidos cada semana</strong> en Colombia. <strong>Al final te espera un bono de $10.000.</strong></p>
         <div class="hero-meta">
             <span>&lt; 1 minuto</span>
             <span>100% gratis</span>
             <span>Resultado personalizado</span>
+            <span>🎁 Bono $10.000</span>
         </div>
     </div>
     <div class="prog" id="progBlock" style="display:none">
@@ -169,6 +190,33 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
     </button>
 </div>
 
+<!-- ==================== SLIDE R: REENCUADRE (V7) ==================== -->
+<div class="slide" id="s-reframe">
+    <div class="reframe">
+        <div class="reframe-k">&iquest;Sab&iacute;as que...?</div>
+        <h2 class="reframe-t" id="reframeTitle">No es tu colch&oacute;n. <em>Son tus s&aacute;banas.</em></h2>
+        <p class="reframe-p" id="reframeText"></p>
+        <button class="btn" type="button" onclick="showLoading()"><span>Ver mi diagn&oacute;stico</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg></button>
+    </div>
+</div>
+
+<!-- ==================== SLIDE P: PREMIO RASPA Y GANA (V7) ==================== -->
+<div class="slide" id="s-premio">
+    <div class="premio">
+        <div class="reframe-k">🎁 Premio por terminar</div>
+        <h2 class="premio-t">Raspa y <em>descubre tu bono</em></h2>
+        <p class="premio-s">Pasa el dedo sobre la tarjeta</p>
+        <div class="scratch" id="scratchBox">
+            <div class="scratch-prize"><div class="scratch-lbl">Tu bono Litper</div><div class="scratch-amt">$10.000</div><div class="scratch-lbl">para cualquier compra</div></div>
+            <canvas id="scratchCanvas"></canvas>
+        </div>
+        <button class="link-btn" type="button" id="revealBtn" onclick="revealPrize()">o toca aqu&iacute; para revelarlo</button>
+        <div class="codebox" id="codeBox"><span class="codebox-code" id="codeText">QUIZLITPER10</span><button class="codebox-btn" type="button" onclick="copyCode(this)">Copiar</button></div>
+        <p class="codebox-note" id="codeNote">Un solo uso por cliente. V&aacute;lido hasta el 31 de diciembre de 2026 en litper.store. Si el formulario te pide c&oacute;digo, escr&iacute;belo tal cual.</p>
+        <button class="btn" type="button" id="premioNext" onclick="showRuta()"><span>Usar mi bono en mi soluci&oacute;n</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg></button>
+    </div>
+</div>
+
 <!-- ==================== SLIDE 1: LOADING ==================== -->
 <div class="slide" id="s-load">
     <div class="loading">
@@ -193,8 +241,8 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
         <p class="brecha-desc" id="brechaDesc">Loading...</p>
 
         <div class="brecha-stat">
-            <div class="brecha-stat-num" id="brechaStat">73%</div>
-            <div class="brecha-stat-label" id="brechaStatLabel">de las personas con tu perfil pierden hasta 2 horas de sue&ntilde;o real por noche</div>
+            <div class="brecha-stat-num" id="brechaStat" style="font-size:clamp(30px,9vw,44px)">Paga 1, lleva 6</div>
+            <div class="brecha-stat-label" id="brechaStatLabel">La oferta vigente para tu soluci&oacute;n</div>
         </div>
 
         <div class="brecha-consequence">
@@ -207,8 +255,8 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
             <div class="brecha-solution-text" id="brechaSolution">La buena noticia: <strong>hay una soluci&oacute;n espec&iacute;fica para tu tipo</strong>. Y es m&aacute;s simple de lo que piensas.</div>
         </div>
 
-        <button class="btn" onclick="showRuta()">
-            <span>Ver mi soluci&oacute;n personalizada</span>
+        <button class="btn" type="button" onclick="showPremio()">
+            <span>🎁 Desbloquear mi premio</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg>
         </button>
     </div>
@@ -221,6 +269,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
 
         <div class="ruta-product">
             <div class="ruta-ico" id="rutaIco">🛡️</div>
+            <div class="offer-chip" id="rutaOffer">Paga 1, lleva 6</div>
             <h2 class="ruta-name" id="rutaName">Protector de colch&oacute;n <em>Premium</em></h2>
             <div class="ruta-mechanism" id="rutaMechanism">Mecanismo &uacute;nico: Termosellado 360&deg;</div>
             <div class="ruta-benefits" id="rutaBenefits">
@@ -230,33 +279,30 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
             </div>
         </div>
 
-        <div class="slabel">Testimonios reales</div>
-        <div class="ruta-testimonials" id="rutaTestimonials">
-            <div class="ruta-testi">
-                <div class="ruta-testi-text">"Llevaba meses buscando algo as&iacute;. Desde que lo tengo, mi colch&oacute;n est&aacute; como nuevo."</div>
-                <div class="ruta-testi-author"><span class="ruta-testi-stars">★★★★★</span> Mar&iacute;a C. &middot; Bogot&aacute;</div>
-            </div>
-            <div class="ruta-testi">
-                <div class="ruta-testi-text">"Lo mejor es que no cambia la sensaci&oacute;n del colch&oacute;n. Duermes igual pero protegido."</div>
-                <div class="ruta-testi-author"><span class="ruta-testi-stars">★★★★★</span> Carlos R. &middot; Medell&iacute;n</div>
-            </div>
-        </div>
+        <div class="bono-strip">🎁 <span>Tu bono de <b>$10.000</b> ya va aplicado en el link. C&oacute;digo: <b>QUIZLITPER10</b></span></div>
 
-        <a class="btn-wa" id="rutaCTA" href="#" target="_blank">
+        <a class="btn btn-shop" id="rutaShop" href="#" target="_blank" rel="noopener">
+            <span>Ver en la tienda con mi bono</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-7 7 7-7 7"/></svg>
+        </a>
+        <a class="btn-wa btn-wa-sec" id="rutaCTA" href="#" target="_blank" rel="noopener">
             <span>💬</span>
-            <span>Quiero el m&iacute;o &rarr; Esc&iacute;benos por WhatsApp</span>
+            <span>Prefiero pedirlo por WhatsApp</span>
         </a>
 
+        <!-- Prueba social: SOLO testimonios reales aportados por el CEO. Vacio = oculto. -->
+        <div class="ruta-testimonials" id="rutaTestimonials" style="display:none"></div>
+
         <div class="proof" style="margin-top:24px">
-            <div class="proof-avs"><div class="proof-av">MC</div><div class="proof-av">JR</div><div class="proof-av">LT</div><div class="proof-av">+15K</div></div>
-            <div class="proof-text"><strong>+15.000 familias</strong> colombianas conf&iacute;an en Litper &middot; <em>&ldquo;Cambi&oacute; mi descanso&rdquo;</em></div>
+            <div class="proof-avs"><div class="proof-av">🚚</div><div class="proof-av">🇨🇴</div></div>
+            <div class="proof-text"><strong>M&aacute;s de 2.000 pedidos cada semana</strong> salen de Litper a toda Colombia &middot; <em>pagas cuando te llega</em></div>
         </div>
 
-        <div class="slabel">Tambi&eacute;n te puede interesar</div>
+        <div class="slabel">Cat&aacute;logo completo &middot; tu bono sirve en todo</div>
         <div class="others-grid" id="othersGrid"></div>
 
         <div class="gars">
-            <div class="gar"><div class="gar-ico">🛡️</div><div class="gar-t">Garant&iacute;a<br>3 meses</div><div class="gar-d">Devuelve si no funciona</div></div>
+            <div class="gar"><div class="gar-ico">🛡️</div><div class="gar-t">Garant&iacute;a<br>60 d&iacute;as</div><div class="gar-d">Duerme Tranquilo</div></div>
             <div class="gar"><div class="gar-ico">💳</div><div class="gar-t">Contra<br>entrega</div><div class="gar-d">Pagas al recibir</div></div>
             <div class="gar"><div class="gar-ico">🚚</div><div class="gar-t">Env&iacute;o<br>gratis</div><div class="gar-d">A todo Colombia</div></div>
         </div>
@@ -264,8 +310,9 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
         <div class="slabel" style="margin-top:28px">Preguntas frecuentes</div>
         <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;C&oacute;mo funciona pago contra entrega?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">La transportadora llega a tu direcci&oacute;n, te entregan el producto y <strong>pagas en ese momento</strong>. No pagas nada antes.</div></div></div>
         <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Cu&aacute;nto tarda la entrega?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in"><strong>Bogot&aacute;:</strong> 1-2 d&iacute;as. <strong>Medell&iacute;n, Cali:</strong> 2-3 d&iacute;as. <strong>Otras:</strong> 3-6 d&iacute;as.</div></div></div>
-        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Qu&eacute; incluye la garant&iacute;a de 3 meses?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Si no cumple lo que prometemos, te devolvemos <strong>la plata completa y te quedas con el producto</strong>. Riesgo cero.</div></div></div>
-        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Por qu&eacute; es diferente a lo que venden en otros lados?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Nuestros productos son <strong>Premium verificados</strong> con tecnolog&iacute;a exclusiva. No son los mismos que encuentras en cualquier tienda. Por eso damos garant&iacute;a real.</div></div></div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;C&oacute;mo funciona la garant&iacute;a de 60 d&iacute;as?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in"><strong>Garant&iacute;a Duerme Tranquilo:</strong> tienes 60 d&iacute;as. Si el producto no cumple lo que prometemos, escr&iacute;benos y <strong>te devolvemos tu dinero</strong>.</div></div></div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;C&oacute;mo uso mi bono de $10.000?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Entra por el bot&oacute;n <strong>Ver en la tienda con mi bono</strong>: el descuento queda cargado. Si el formulario te pide c&oacute;digo, escribe <strong>QUIZLITPER10</strong>. Un uso por cliente, hasta el 31-dic-2026.</div></div></div>
+        <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span>&iquest;Por qu&eacute; es diferente a lo que venden en otros lados?</span><div class="faq-ic">+</div></div><div class="faq-a"><div class="faq-a-in">Cada producto se vende con su oferta completa, <strong>env&iacute;o gratis y pago al recibir</strong>. Y si no cumple, tienes 60 d&iacute;as de garant&iacute;a.</div></div></div>
 
         <footer class="footer"><span>LITPER &copy; 2026</span><span>Colombia 🇨🇴</span><span>litper.store</span></footer>
     </div>
@@ -276,79 +323,70 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--void);color:v
 const WA='573022658970';
 const TOTAL_Q=5;
 const Q={step:0,answers:{}};
+/* Bono Shopify creado 23-sep-2026: QUIZLITPER10, $10.000 COP, 1 uso por cliente, hasta 31-dic-2026, limite total 2000 */
+const BONO='QUIZLITPER10';
+const SHOP='https://litper.store';
+function shopLink(handle){return SHOP+'/discount/'+BONO+'?redirect='+encodeURIComponent('/products/'+handle);}
 
-/* ============ TIPOS DE RESULTADO (FUNNEL 400) ============ */
+/* ============ TIPOS DE RESULTADO ============
+   Regla: sin cifras inventadas. Todo texto debe ser verificable o descriptivo. */
 const TIPOS={
-    inquieto:{
-        key:'inquieto',
-        icon:'🌀',
-        name:'Dormidor Inquieto',
-        desc:'Te mueves mucho de noche, te despiertas cansado y tus sabanas terminan enredadas. <strong>Tu cuerpo no encuentra comodidad</strong> porque tu ropa de cama no esta disenada para tu forma de dormir.',
-        stat:'73%',
-        statLabel:'de las personas con tu perfil pierden hasta 2 horas de sueno real cada noche',
-        consequence:'Cada noche de mal sueno acumula <strong>fatiga cronica</strong>. En 6 meses tu rendimiento baja un 40% y tu humor cambia sin que te des cuenta. No es que "duermas mal" — es que tu cama te esta saboteando.',
-        solution:'Para tu tipo, la solucion no es cambiar de colchon. Es <strong>cambiar lo que toca tu piel</strong>: sabanas de 600 hilos que no se enredan, no hacen bolitas y abrazan tu cuerpo.',
-        product:'sabanas',
-        mechanism:'Tecnologia Anti-Pilling 600 Hilos'
-    },
-    protector:{
-        key:'protector',
-        icon:'💧',
-        name:'Guardian Preocupado',
-        desc:'Vives con miedo de que tu colchon se dane. <strong>Manchas, liquidos, acaros</strong> — sabes que cada dia sin proteccion es un dia mas de dano invisible que no puedes revertir.',
-        stat:'$2.8M',
-        statLabel:'es lo que cuesta un colchon nuevo. Sin proteccion, el tuyo pierde 30% de vida util cada ano',
-        consequence:'Los acaros se duplican cada 3 meses en un colchon sin proteccion. <strong>Las manchas penetran las fibras</strong> y generan olores y bacterias que ningun lavado elimina. En 2 anos, tu colchon se vuelve irrecuperable.',
-        solution:'Tu colchon necesita una <strong>barrera invisible de proteccion total</strong>. El termosellado 360 grados sella cada fibra sin cambiar la sensacion al dormir.',
-        product:'protector',
-        mechanism:'Termosellado 360 Grados Antifluido'
-    },
-    sensible:{
-        key:'sensible',
-        icon:'👁️',
-        name:'Dormidor Sensible',
-        desc:'Eres hipersensible a tu entorno. <strong>La luz, la temperatura y el ruido</strong> te despiertan facilmente. Tu cuarto no esta disenado para proteger tu sueno — esta disenado contra ti.',
-        stat:'8°C',
-        statLabel:'menos de temperatura y 100% de oscuridad: eso es lo que tu tipo de sueno necesita',
-        consequence:'Cada despertar prematuro por luz o calor <strong>rompe tu ciclo REM</strong>. Duermes 7 horas pero descansas como si fueran 4. Tu cerebro nunca llega al sueno profundo reparador.',
-        solution:'Para tu tipo, la solucion es <strong>controlar tu entorno</strong>. Cortinas que bloquean 100% de la luz y bajan la temperatura hasta 8 grados.',
-        product:'cortinas',
-        mechanism:'Triple Barrera: Luz + Calor + Ruido'
-    },
-    frio:{
-        key:'frio',
-        icon:'🥶',
-        name:'Buscador de Calor',
-        desc:'Pasas frio cada noche y ninguna cobija parece suficiente. <strong>Tu cuerpo pierde calor</strong> mas rapido de lo que tu ropa de cama puede retener.',
-        stat:'45min',
-        statLabel:'tarda una persona con frio en alcanzar sueno profundo vs 12 min con la temperatura correcta',
-        consequence:'Dormir con frio <strong>contrae tus musculos toda la noche</strong>. Te despiertas con tension, dolor de espalda y agotamiento. Tu cuerpo gasta energia en calentarse en vez de recuperarse.',
-        solution:'No necesitas "mas cobijas". Necesitas <strong>la cobija correcta</strong>: tejida gruesa que retiene calor corporal sin peso excesivo.',
-        product:'cobijas',
-        mechanism:'Tejido Acanalado de Retencion Termica'
-    },
-    total:{
-        key:'total',
-        icon:'🏚️',
-        name:'Cuarto en Modo Supervivencia',
-        desc:'Tu cuarto tiene multiples problemas al mismo tiempo. <strong>No es un solo producto lo que falla</strong> — es todo el ecosistema de tu descanso que necesita reset completo.',
-        stat:'12',
-        statLabel:'dias completos al ano pierdes en mal descanso acumulado cuando todo falla a la vez',
-        consequence:'Cuando todo falla a la vez, <strong>arreglar una cosa no basta</strong>. Comprar solo sabanas o solo un protector es como ponerle una curita a una herida que necesita cirugia. El problema se mantiene.',
-        solution:'Para tu tipo, la unica solucion real es <strong>el reset completo</strong>. Los 3 productos trabajando juntos crean un sistema que transforma tu cuarto de supervivencia a santuario.',
-        product:'kit',
-        mechanism:'Sistema Completo Litper: Proteccion + Comfort + Control'
-    }
+    inquieto:{key:'inquieto',icon:'🌀',name:'Dormidor Inquieto',
+        reframeT:'No es tu colch&oacute;n. <em>Son tus s&aacute;banas.</em>',
+        reframeP:'Las s&aacute;banas delgadas se sueltan, se enredan y guardan calor. <strong>Tu cuerpo pasa la noche acomod&aacute;ndose</strong> en vez de descansar.',
+        desc:'Te mueves mucho, te despiertas cansado y amaneces con las s&aacute;banas enredadas. <strong>Lo que toca tu piel no te deja descansar.</strong>',
+        consequence:'Si nada cambia, <strong>cada noche se repite igual</strong>: dormir no es lo mismo que descansar.',
+        solution:'Para tu tipo la soluci&oacute;n no es un colch&oacute;n nuevo. Es <strong>cambiar lo que toca tu piel</strong>: s&aacute;banas de 600 hilos con el&aacute;stico que no se suelta.',
+        product:'sabanas'},
+    protector:{key:'protector',icon:'💧',name:'Guardi&aacute;n Preocupado',
+        reframeT:'El da&ntilde;o no se ve. <em>Est&aacute; por dentro.</em>',
+        reframeP:'El sudor y los l&iacute;quidos atraviesan la s&aacute;bana y llegan al colch&oacute;n. <strong>Tu colch&oacute;n no entra a la lavadora. Un protector s&iacute;.</strong>',
+        desc:'Te preocupa que tu colch&oacute;n se da&ntilde;e: <strong>manchas, l&iacute;quidos, &aacute;caros</strong>. Y un colch&oacute;n nuevo cuesta mucho m&aacute;s que protegerlo.',
+        consequence:'Lo que entra al colch&oacute;n <strong>ya no sale con un lavado</strong>. Cada noche sin protecci&oacute;n suma.',
+        solution:'Tu colch&oacute;n necesita una <strong>barrera antifluido que s&iacute; se lava</strong>. Termosellado 360&deg;, sin cambiar la sensaci&oacute;n al dormir.',
+        product:'protector'},
+    sensible:{key:'sensible',icon:'👁️',name:'Dormidor Sensible',
+        reframeT:'No es insomnio. <em>Es tu ventana.</em>',
+        reframeP:'La luz del amanecer y el calor que entra por la ventana <strong>cortan tu sue&ntilde;o antes de tiempo</strong>, aunque te acuestes temprano.',
+        desc:'La luz, el calor y el ruido te despiertan f&aacute;cil. <strong>Tu cuarto no est&aacute; protegiendo tu sue&ntilde;o.</strong>',
+        consequence:'Despertarte antes de tiempo <strong>corta el sue&ntilde;o profundo</strong>. Duermes horas, pero no descansas.',
+        solution:'Para tu tipo la soluci&oacute;n es <strong>controlar tu entorno</strong>: cortina blackout que oscurece el cuarto.',
+        product:'cortinas'},
+    frio:{key:'frio',icon:'🥶',name:'Buscador de Calor',
+        reframeT:'No te faltan cobijas. <em>Te falta la correcta.</em>',
+        reframeP:'Varias cobijas delgadas pesan y dejan escapar el calor. <strong>Una sola bien hecha abriga m&aacute;s</strong> y no te aplasta.',
+        desc:'Pasas fr&iacute;o cada noche y ninguna cobija parece suficiente. <strong>Tu ropa de cama no retiene tu calor.</strong>',
+        consequence:'Dormir con fr&iacute;o <strong>tensa el cuerpo toda la noche</strong>. Te levantas m&aacute;s cansado de lo que te acostaste.',
+        solution:'No necesitas m&aacute;s capas. Necesitas <strong>un edred&oacute;n t&eacute;rmico tipo plum&oacute;n</strong>, doble faz y reversible.',
+        product:'edredon'},
+    total:{key:'total',icon:'🏚️',name:'Cuarto en Modo Supervivencia',
+        reframeT:'No es una cosa. <em>Es todo el sistema.</em>',
+        reframeP:'Arreglar una sola pieza no cambia la noche. <strong>Colch&oacute;n protegido y s&aacute;banas buenas</strong> trabajan juntos.',
+        desc:'Tu cuarto tiene varios problemas a la vez. <strong>No falla un producto: falla el conjunto.</strong>',
+        consequence:'Cambiar solo una cosa <strong>deja el resto igual</strong>. Por eso la sensaci&oacute;n de que nada funciona.',
+        solution:'Para tu tipo la soluci&oacute;n es <strong>el combo base</strong>: protector + s&aacute;banas 600 hilos. Tu bono sirve en los dos.',
+        product:'protector'}
 };
 
-/* ============ PRODUCTOS ============ */
+/* ============ PRODUCTOS (Shopify litper.store, verificados 23-sep-2026) ============
+   handle null = producto no publicado -> el CTA principal va a WhatsApp. */
 const PRODUCTS={
-    protector:{key:'protector',ico:'🛡️',name:'Protector de colchon <em>Premium</em>',mechanism:'Termosellado 360 Grados',benefits:['Antifluido alta resistencia — cero liquidos','Termosellado 360 sin costuras expuestas','Hipoalergenico — elimina acaros y bacterias'],testimonials:[{text:'"Llevaba meses buscando algo asi. Desde que lo tengo, mi colchon esta como nuevo."',author:'Maria C.',city:'Bogota'},{text:'"Lo mejor es que no cambia la sensacion del colchon. Duermes igual pero protegido."',author:'Carlos R.',city:'Medellin'}]},
-    sabanas:{key:'sabanas',ico:'🛏️',name:'Pack sabanas <em>Premium</em>',mechanism:'600 Hilos Anti-Pilling',benefits:['600 hilos — suaves como hotel 5 estrellas','Anti-pilling: no hacen bolitas nunca','Elastico profundo — no se sueltan de noche'],testimonials:[{text:'"Nunca habia dormido en sabanas asi. Se siente como estar en un hotel de lujo."',author:'Laura M.',city:'Bogota'},{text:'"Llevo 4 meses y estan como nuevas. Cero bolitas. Super recomendadas."',author:'Andres P.',city:'Cali'}]},
-    cortinas:{key:'cortinas',ico:'🪟',name:'Cortinas <em>Blackout</em>',mechanism:'Triple Barrera Litper',benefits:['Bloquea 100% de la luz solar','Baja hasta 8 grados la temperatura','Sistema Triple Barrera: luz + calor + ruido'],testimonials:[{text:'"Mi cuarto parecia un horno. Desde que las puse, bajo la temperatura increible."',author:'Diana V.',city:'Barranquilla'},{text:'"Por fin puedo dormir hasta tarde sin que la luz me despierte a las 5am."',author:'Jorge L.',city:'Medellin'}]},
-    cobijas:{key:'cobijas',ico:'🧣',name:'Cobija Acanalada <em>Premium</em>',mechanism:'Tejido Acanalado Termico',benefits:['Ultra suave textura acanalada premium','Tejida gruesa — retiene el doble de calor','Ligera pero abrigan como ninguna otra'],testimonials:[{text:'"Es la cobija mas rica que he tenido. Abriga mucho y no pesa."',author:'Valentina S.',city:'Bogota'},{text:'"Mis hijos me la quieren quitar siempre. Tuve que comprar otra para ellos."',author:'Felipe G.',city:'Pereira'}]},
-    kit:{key:'kit',ico:'✨',name:'Kit Cuarto <em>Perfecto</em>',mechanism:'Sistema Completo Litper',benefits:['Protector + Sabanas + Cortinas juntos','Sistema disenado para trabajar en conjunto','Transformacion completa de tu cuarto'],testimonials:[{text:'"Compre el kit completo y fue la mejor decision. Mi cuarto es otro."',author:'Natalia H.',city:'Bogota'},{text:'"Era esceptico pero la diferencia se siente desde la primera noche."',author:'Ricardo M.',city:'Cali'}]}
+    protector:{ico:'🛡️',name:'Protector de colch&oacute;n <em>Sello Total</em>',offer:'Paga 1, lleva 6 productos',handle:'protector-colchon-antifluido-paga-1-lleva-6',
+        mechanism:'Termosellado 360&deg; antifluido',benefits:['2 protectores + 4 fundas de almohada','Antifluido: el l&iacute;quido no llega al colch&oacute;n','Hipoalerg&eacute;nico y antiácaros','El&aacute;stico que ajusta hasta 40 cm']},
+    sabanas:{ico:'🛏️',name:'S&aacute;banas hoteleras <em>600 hilos</em>',offer:'Paga 1, lleva 2 packs',handle:'pack-de-descanso-premium-600-hilos-paga-1-lleva-2-envio-gratis-colombia-litper',
+        mechanism:'Deluxe 600 hilos',benefits:['2 packs completos por el precio de 1','Suavidad de hotel desde la primera noche','El&aacute;stico profundo: no se sueltan']},
+    edredon:{ico:'🧸',name:'Edred&oacute;n tipo plum&oacute;n <em>Doble Faz</em>',offer:'Paga 1, lleva 5 productos',handle:'edredon-tipo-plumon-doble-faz',
+        mechanism:'T&eacute;rmico y reversible',benefits:['Dos colores en uno: le das la vuelta','T&eacute;rmico, abriga sin pesar','Sencillo, doble, queen y king']},
+    cobijas:{ico:'🧣',name:'Cobija acanalada <em>Premium</em>',offer:'Tejida gruesa',handle:'cobija-acanalada-premium-manta-tejida-gruesa',
+        mechanism:'Tejido acanalado',benefits:['Tejido grueso que abriga','Decora la cama','Varios colores']},
+    almohadas:{ico:'☁️',name:'D&uacute;o almohada <em>Premium 50x70</em>',offer:'2 almohadas',handle:'duo-almohada-premiun',
+        mechanism:'Tama&ntilde;o 50x70',benefits:['2 almohadas 50x70','Completa tu cama de hotel']},
+    cortinas:{ico:'🪟',name:'Cortina <em>Blackout Premium</em>',offer:'+ s&aacute;banas 600 hilos de regalo',handle:null,
+        mechanism:'Oscurece tu cuarto',benefits:['Bloquea la luz de la ma&ntilde;ana','Ayuda a mantener el cuarto fresco','Incluye juego de s&aacute;banas 600 hilos de regalo']}
 };
+const CATALOG=['protector','sabanas','edredon','cobijas','almohadas','cortinas'];
+function plain(h){const d=document.createElement('div');d.innerHTML=h;return d.textContent;}
+function waLink(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
 
 /* ============ QUIZ LOGIC ============ */
 function startQuiz(){
@@ -358,8 +396,9 @@ function startQuiz(){
     document.getElementById('progBlock').style.display='block';
     document.getElementById('q1').style.display='block';
     updateProg();
-    if(typeof fbq!=='undefined')fbq('trackCustom','quiz_start');
+    track('quiz_start');
 }
+function track(ev,data){try{if(typeof fbq!=='undefined')fbq('trackCustom',ev,data||{});if(window.dataLayer)dataLayer.push(Object.assign({event:ev},data||{}));}catch(e){}}
 
 function qNext(){
     if(Q.step<TOTAL_Q){
@@ -367,13 +406,12 @@ function qNext(){
         Q.step++;
         document.getElementById('q'+Q.step).style.display='block';
         updateProg();
-        if(typeof fbq!=='undefined')fbq('trackCustom','quiz_step_'+Q.step);
+        track('quiz_step_'+Q.step);
     }else{
-        showLoading();
-        if(typeof fbq!=='undefined')fbq('trackCustom','quiz_complete',{tipo:classifyType()});
+        showReframe();
+        track('quiz_complete',{tipo:classifyType()});
     }
 }
-
 function qBack(){
     if(Q.step>1){
         document.getElementById('q'+Q.step).style.display='none';
@@ -382,14 +420,12 @@ function qBack(){
         updateProg();
     }
 }
-
 function updateProg(){
     const p=Math.round((Q.step/TOTAL_Q)*100);
     document.getElementById('qFill').style.width=p+'%';
     document.getElementById('qN').textContent=Q.step;
     document.getElementById('qPct').textContent=p;
 }
-
 document.querySelectorAll('.opts').forEach(o=>{
     const q=o.dataset.q;
     o.addEventListener('click',e=>{
@@ -401,30 +437,19 @@ document.querySelectorAll('.opts').forEach(o=>{
         setTimeout(()=>qNext(),400);
     });
 });
+document.querySelectorAll('button').forEach(b=>{if(!b.getAttribute('type'))b.setAttribute('type','button');});
 
-/* ============ CLASSIFICATION ============ */
 function classifyType(){
     const a=Q.answers;
-    // Primary classification based on frustration + routine
     if(a.frustracion==='todo') return 'total';
     if(a.frustracion==='colchon') return 'protector';
     if(a.frustracion==='sabanas') return 'inquieto';
     if(a.frustracion==='luz') return 'sensible';
-    // Fallback to routine
     if(a.rutina==='frio') return 'frio';
     if(a.rutina==='inquieto') return 'inquieto';
     if(a.rutina==='ligero') return 'sensible';
     if(a.rutina==='preocupado') return 'protector';
-    return 'inquieto'; // default
-}
-
-/* ============ LOADING ============ */
-function showLoading(){
-    switchSlide('s-load');
-    setTimeout(()=>document.getElementById('ls2').classList.add('done'),700);
-    setTimeout(()=>document.getElementById('ls3').classList.add('done'),1400);
-    setTimeout(()=>document.getElementById('ls4').classList.add('done'),2100);
-    setTimeout(()=>showBrecha(),2800);
+    return 'inquieto';
 }
 
 function switchSlide(id){
@@ -433,60 +458,116 @@ function switchSlide(id){
     window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ============ BRECHA EMOCIONAL ============ */
-function showBrecha(){
-    const tipo=classifyType();
-    const t=TIPOS[tipo];
+/* ============ REENCUADRE (cambio de causa) ============ */
+function showReframe(){
+    const t=TIPOS[classifyType()];
+    document.getElementById('reframeTitle').innerHTML=t.reframeT;
+    document.getElementById('reframeText').innerHTML=t.reframeP;
+    switchSlide('s-reframe');
+    track('reframe_view',{tipo:t.key});
+}
 
-    document.getElementById('brechaTypeLabel').textContent='Tu tipo: '+t.name;
+/* ============ LOADING ============ */
+function showLoading(){
+    switchSlide('s-load');
+    ['ls2','ls3','ls4'].forEach(id=>document.getElementById(id).classList.remove('done'));
+    setTimeout(()=>document.getElementById('ls2').classList.add('done'),700);
+    setTimeout(()=>document.getElementById('ls3').classList.add('done'),1400);
+    setTimeout(()=>document.getElementById('ls4').classList.add('done'),2100);
+    setTimeout(()=>showBrecha(),2800);
+}
+
+/* ============ DIAGNOSTICO ============ */
+function showBrecha(){
+    const tipo=classifyType(),t=TIPOS[tipo],p=PRODUCTS[t.product];
+    document.getElementById('brechaTypeLabel').textContent='Tu tipo: '+plain(t.name);
     document.getElementById('brechaIcon').textContent=t.icon;
     document.getElementById('brechaTitle').innerHTML='Tu tipo: <em>'+t.name+'</em>';
     document.getElementById('brechaDesc').innerHTML=t.desc;
-    document.getElementById('brechaStat').textContent=t.stat;
-    document.getElementById('brechaStatLabel').textContent=t.statLabel;
+    document.getElementById('brechaStat').innerHTML=p.offer;
+    document.getElementById('brechaStatLabel').innerHTML=plain(p.name)+' &middot; env&iacute;o gratis y pagas al recibir';
     document.getElementById('brechaConsequence').innerHTML=t.consequence;
     document.getElementById('brechaSolution').innerHTML=t.solution;
-
     switchSlide('s-brecha');
-    if(typeof fbq!=='undefined')fbq('trackCustom','result_view',{tipo:tipo});
+    track('result_view',{tipo:tipo});
 }
 
-/* ============ RUTA DE ESCAPE ============ */
+/* ============ PREMIO: RASPA Y GANA ============ */
+let revealed=false;
+function showPremio(){
+    switchSlide('s-premio');
+    track('premio_view');
+    setTimeout(initScratch,60);
+}
+function initScratch(){
+    if(revealed)return;
+    const c=document.getElementById('scratchCanvas'),box=document.getElementById('scratchBox');
+    const r=box.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+    const w=r.width||340,h=r.height||190;
+    c.width=w*dpr;c.height=h*dpr;
+    const x=c.getContext('2d');x.scale(dpr,dpr);
+    const g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,'#A8832F');g.addColorStop(.5,'#F5CA7A');g.addColorStop(1,'#D4A857');
+    x.fillStyle=g;x.fillRect(0,0,w,h);
+    x.fillStyle='rgba(4,6,10,.75)';x.font='600 15px Inter, sans-serif';x.textAlign='center';
+    x.fillText('RASPA AQUÍ',w/2,h/2-6);x.font='12px Inter, sans-serif';x.fillText('tu premio está debajo',w/2,h/2+16);
+    x.globalCompositeOperation='destination-out';
+    let down=false,moves=0;
+    function pos(e){const b=c.getBoundingClientRect();const p=e.touches?e.touches[0]:e;return{x:p.clientX-b.left,y:p.clientY-b.top};}
+    function scr(e){if(!down||revealed)return;e.preventDefault();const p=pos(e);x.beginPath();x.arc(p.x,p.y,24,0,Math.PI*2);x.fill();if(++moves%8===0)check();}
+    function check(){
+        const d=x.getImageData(0,0,c.width,c.height).data;let clear=0,tot=0;
+        for(let i=3;i<d.length;i+=64){tot++;if(d[i]===0)clear++;}
+        if(clear/tot>.45)revealPrize();
+    }
+    c.onpointerdown=e=>{down=true;c.setPointerCapture&&c.setPointerCapture(e.pointerId);scr(e);};
+    c.onpointermove=scr;c.onpointerup=()=>{down=false;};c.onpointercancel=()=>{down=false;};
+}
+function revealPrize(){
+    if(revealed)return;revealed=true;
+    document.getElementById('scratchCanvas').classList.add('gone');
+    document.getElementById('revealBtn').style.display='none';
+    document.getElementById('codeBox').classList.add('show');
+    document.getElementById('codeNote').classList.add('show');
+    document.getElementById('premioNext').classList.add('show');
+    track('bono_revelado',{codigo:BONO});
+}
+function copyCode(btn){
+    const done=()=>{btn.textContent='¡Copiado!';setTimeout(()=>btn.textContent='Copiar',1800);};
+    if(navigator.clipboard)navigator.clipboard.writeText(BONO).then(done,done);else done();
+    track('bono_copiado');
+}
+
+/* ============ SOLUCION + CATALOGO ============ */
 function showRuta(){
-    const tipo=classifyType();
-    const t=TIPOS[tipo];
-    const p=PRODUCTS[t.product];
-
-    // Connection badge
-    document.getElementById('rutaConnection').textContent='Para tu tipo: '+t.name;
-
-    // Product info
+    const tipo=classifyType(),t=TIPOS[tipo],p=PRODUCTS[t.product];
+    document.getElementById('rutaConnection').textContent='Para tu tipo: '+plain(t.name);
     document.getElementById('rutaIco').textContent=p.ico;
+    document.getElementById('rutaOffer').innerHTML=p.offer;
     document.getElementById('rutaName').innerHTML=p.name;
-    document.getElementById('rutaMechanism').textContent='Mecanismo unico: '+p.mechanism;
-    document.getElementById('rutaBenefits').innerHTML=p.benefits.map(b=>'<div class="ruta-ben">'+b+'</div>').join('');
+    document.getElementById('rutaMechanism').innerHTML=p.mechanism;
+    let ben=p.benefits.map(b=>'<div class="ruta-ben">'+b+'</div>').join('');
+    if(p.img)ben='<img class="ruta-img" src="'+p.img+'" alt="'+plain(p.name)+'" loading="lazy">'+ben;
+    document.getElementById('rutaBenefits').innerHTML=ben;
 
-    // Testimonials
-    document.getElementById('rutaTestimonials').innerHTML=p.testimonials.map(t=>
-        '<div class="ruta-testi"><div class="ruta-testi-text">"'+t.text.replace(/"/g,'')+'"</div><div class="ruta-testi-author"><span class="ruta-testi-stars">★★★★★</span> '+t.author+' &middot; '+t.city+'</div></div>'
-    ).join('');
+    const waMsg='Hola Sofía! Hice el test, soy tipo '+plain(t.name)+' y quiero '+plain(p.name)+' ('+plain(p.offer)+'). Mi bono: '+BONO;
+    const shop=document.getElementById('rutaShop');
+    if(p.handle){shop.href=shopLink(p.handle);shop.style.display='flex';}
+    else{shop.href=waLink(waMsg);shop.querySelector('span').textContent='Pedir con mi bono por WhatsApp';}
+    shop.onclick=()=>track('shop_click',{tipo:tipo,product:t.product});
+    const wa=document.getElementById('rutaCTA');wa.href=waLink(waMsg);
+    wa.style.display=p.handle?'flex':'none';
+    wa.onclick=()=>track('whatsapp_click',{tipo:tipo,product:t.product});
 
-    // WhatsApp CTA with quiz context
-    const waMsg=encodeURIComponent('Hola! Hice el test y soy tipo '+t.name+'. Quiero info del '+p.name.replace(/<[^>]*>/g,'')+' para mi cuarto');
-    document.getElementById('rutaCTA').href='https://wa.me/'+WA+'?text='+waMsg;
-
-    // Others grid (products NOT the main one)
-    const otherKeys=Object.keys(PRODUCTS).filter(k=>k!==t.product && k!=='kit');
-    document.getElementById('othersGrid').innerHTML=otherKeys.map(k=>{
+    document.getElementById('othersGrid').innerHTML=CATALOG.filter(k=>k!==t.product).map(k=>{
         const op=PRODUCTS[k];
-        const waOther=encodeURIComponent('Hola! Soy tipo '+t.name+' y quiero info del '+op.name.replace(/<[^>]*>/g,''));
-        return '<a class="others-card" href="https://wa.me/'+WA+'?text='+waOther+'" target="_blank"><div class="others-ico">'+op.ico+'</div><div class="others-name">'+op.name+'</div><div class="others-cta">💬 Preguntar &rarr;</div></a>';
+        const href=op.handle?shopLink(op.handle):waLink('Hola Sofía! Quiero '+plain(op.name)+'. Mi bono: '+BONO);
+        const cta=op.handle?'🛒 Ver con bono &rarr;':'💬 Pedir &rarr;';
+        return '<a class="others-card" href="'+href+'" target="_blank" rel="noopener" onclick="track(\'catalog_click\',{product:\''+k+'\'})"><div class="others-ico">'+op.ico+'</div><div class="others-name">'+op.name+'</div><div class="cat-offer">'+op.offer+'</div><div class="others-cta">'+cta+'</div></a>';
     }).join('');
 
     switchSlide('s-ruta');
-    if(typeof fbq!=='undefined')fbq('trackCustom','product_click',{tipo:tipo,product:t.product});
+    track('product_view',{tipo:tipo,product:t.product});
 }
-
 function toggleFAQ(el){el.classList.toggle('open')}
 </script>
 </body>
